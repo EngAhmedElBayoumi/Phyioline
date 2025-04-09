@@ -1,0 +1,18 @@
+{% extends "admin/change_form.html" %}
+{% load static %}
+
+{% block extrahead %}
+{{ block.super }}
+<script type="text/javascript">
+    django.jQuery(document).ready(function() {
+        django.jQuery('.selector-available option, .selector-chosen option').each(function() {
+            var option = django.jQuery(this);
+            var text = option.text();
+            var imageUrl = text.match(/src="([^"]+)"/);
+            if (imageUrl) {
+                option.data('image-url', imageUrl[1]);
+            }
+        });
+    });
+</script>
+{% endblock %} 

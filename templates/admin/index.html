@@ -1,0 +1,201 @@
+{% extends "unfold/layouts/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block breadcrumbs %}
+<div class="px-4 lg:px-8">
+    <div class="container mb-6 mx-auto -my-3 lg:mb-12">
+        <ul class="flex flex-wrap">
+            {% url 'admin:index' as link %}
+            {% trans 'Home' as name %}
+            {% include 'unfold/helpers/breadcrumb_item.html' with link=link name=name %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="p-4 lg:p-8">
+    <!-- Statistics Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <!-- Total Products -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 p-6" style="border-radius: 15px;">
+            <div class="flex items-center">
+                <div class="p-3 rounded-full bg-blue-100 text-blue-500" style="margin: 0 8px;">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                    </svg>
+                </div>
+                <div class="ml-4">
+                    <h2 class="text-gray-600 text-sm">{% trans "Total Products" %}</h2>
+                    <p class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent" id="total-products">{% trans "Loading..." %}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Orders -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 p-6" style="border-radius: 15px;">
+            <div class="flex items-center">
+                <div class="p-3 rounded-full bg-green-100 text-green-500" style="margin: 0 8px;">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                    </svg>
+                </div>
+                <div class="ml-4">
+                    <h2 class="text-gray-600 text-sm">{% trans "Total Orders" %}</h2>
+                    <p class="text-3xl font-bold bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-transparent" id="total-orders">{% trans "Loading..." %}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Suppliers -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 p-6" style="border-radius: 15px;">
+            <div class="flex items-center">
+                <div class="p-3 rounded-full bg-blue-100 text-blue-500" style="margin: 0 8px;">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                </div>
+                <div class="ml-4">
+                    <h2 class="text-gray-600 text-sm">{% trans "Total Suppliers" %}</h2>
+                    <p class="text-3xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent" id="total-suppliers">{% trans "Loading..." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Stats -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <!-- Total Revenue -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 p-6" style="border-radius: 15px;">
+            <div class="flex items-center">
+                <div class="p-3 rounded-full bg-red-100 text-red-500" style="margin: 0 8px;">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <div class="ml-4">
+                    <h2 class="text-gray-600 text-sm">{% trans "Total Revenue" %}</h2>
+                    <p class="text-3xl font-bold bg-gradient-to-r from-yellow-600 to-yellow-400 bg-clip-text text-transparent" id="total-revenue">{% trans "Loading..." %}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pending Orders -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 p-6" style="border-radius: 15px;">
+            <div class="flex items-center">
+                <div class="p-3 rounded-full bg-red-100 text-red-500" style="margin: 0 8px;">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <div class="ml-4">
+                    <h2 class="text-gray-600 text-sm">{% trans "Pending Orders" %}</h2>
+                    <p class="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent" id="pending-orders">{% trans "Loading..." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+        <!-- Products Chart -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 p-6"style="border-radius: 15px;">
+            <h3 class="text-lg font-semibold text-gray-700 mb-4">{% trans "Products Overview" %}</h3>
+            <canvas id="productsChart"></canvas>
+        </div>
+
+        <!-- Orders Chart -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 p-6"style="border-radius: 15px;">
+            <h3 class="text-lg font-semibold text-gray-700 mb-4">{% trans "Orders Overview" %}</h3>
+            <canvas id="ordersChart"></canvas>
+        </div>
+
+        <!-- Suppliers Chart -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 p-6"style="border-radius: 15px;">
+            <h3 class="text-lg font-semibold text-gray-700 mb-4">{% trans "Suppliers Overview" %}</h3>
+            <canvas id="suppliersChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Function to format date
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    }
+
+    // Function to format currency
+    function formatCurrency(amount) {
+        return new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        }).format(amount);
+    }
+
+    // Function to create or update chart
+    function createChart(ctx, data, label, color) {
+        return new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: data.map(item => formatDate(item.date)),
+                datasets: [{
+                    label: label,
+                    data: data.map(item => item.count),
+                    borderColor: color,
+                    tension: 0.1,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Last 7 Days'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Load dashboard stats
+    fetch('/dashboard_stats/')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('total-products').textContent = data.total_products;
+            document.getElementById('total-orders').textContent = data.total_orders;
+            document.getElementById('total-suppliers').textContent = data.total_suppliers;
+            document.getElementById('total-revenue').textContent = Number(data.total_revenue).toFixed(2);
+            document.getElementById('pending-orders').textContent = data.pending_orders;
+        });
+
+    // Load chart data
+    fetch('/chart_data/')
+        .then(response => response.json())
+        .then(data => {
+            // Products Chart
+            const productsCtx = document.getElementById('productsChart').getContext('2d');
+            createChart(productsCtx, data.products_7_days, 'New Products', 'rgb(59, 130, 246)');
+
+            // Orders Chart
+            const ordersCtx = document.getElementById('ordersChart').getContext('2d');
+            createChart(ordersCtx, data.orders_7_days, 'New Orders', 'rgb(34, 197, 94)');
+
+            // Suppliers Chart
+            const suppliersCtx = document.getElementById('suppliersChart').getContext('2d');
+            createChart(suppliersCtx, data.suppliers_7_days, 'New Suppliers', 'rgb(168, 85, 247)');
+        });
+</script>
+{% endblock %}

@@ -1,0 +1,113 @@
+.object-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+    background-color: white;
+    padding: 15px;
+}
+
+/* Add some additional styles to make changes more visible */
+#header {
+    background: #2c3e50;
+    color: white;
+}
+
+#content-main {
+    padding: 20px;
+}
+
+
+html[dir="rtl"] [x-show="openLanguageLinks"] {
+    left: 0 !important;
+    right: auto !important;
+}
+
+html[dir="ltr"] [x-show="openLanguageLinks"] {
+    right: -2px !important;
+    left: auto !important;
+}
+
+
+
+html[dir="rtl"] [x-show="openUserLinks"] {
+    left: 0 !important;
+    right: auto !important;
+}
+
+html[dir="ltr"] [x-show="openUserLinks"] {
+    right: -2px !important;
+    left: auto !important;
+}
+
+
+
+html[dir="rtl"] [x-show="openTheme"] {
+    left: 0 !important;
+    right: auto !important;
+}
+
+html[dir="ltr"] [x-show="openTheme"] {
+    right: -2px !important;
+    left: auto !important;
+}
+
+
+
+
+
+
+
+html[dir="rtl"] tr th{
+    text-align: right !important;
+  }
+
+
+.module {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin: 15px;
+    background-color: white;
+}
+
+
+
+.module h2 {
+    background: white;
+    padding: 10px 15px;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+    border-radius: 8px 8px 0 0;
+}
+
+
+html.dark .module {
+    background-color: #111827; /* or any dark color you prefer */
+}
+
+html.dark .module h2 {
+    background-color: #111827; /* or any dark color you prefer */
+}
+
+html.dark .bg-white{
+    background-color: #111827; /* or any dark color you prefer */
+
+}
+html.dark .object-tools{
+    background-color: #111827; /* or any dark color you prefer */
+
+}
+
+
+
+.submit-row input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}

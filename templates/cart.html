@@ -1,0 +1,253 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% load i18n %}
+{% block content %}
+{% include 'components/header.html' %}
+
+
+    <!--  main body - start
+		==================================================  -->
+    <main>
+      <!--  breadcrumb-section - start
+			==================================================  -->
+      <section id="slider-section" class="slider-section clearfix">
+        <div class="item d-flex align-items-center" data-background="{% static 'assets/images/hero-bg.png' %}" style="height: 70vh">
+          <div class="container">
+            <div class="text-center mt-5 mb-5" style="text-align: center;">
+              <h1 style="text-align: center;">{% trans "CART" %}</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  breadcrumb-section - end
+			==================================================  -->
+
+      <!--  cart-section - start
+			==================================================  -->
+      <section id="cart-section" class="cart-section sec-ptb-100 clearfix">
+        <div class="container  cart-container">
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>{% trans "Product Name" %}</th>
+                  <th>{% trans "Total" %}</th>
+                  <th>{% trans "Quantity" %}</th>
+                  <th>{% trans "Subtotal" %}</th>
+                </tr>
+              </thead>
+              {% for product in product %}
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="product-info ul-li">
+                      <ul class="clearfix">
+                        <li>
+                          <a href="{% url 'product:remove_from_card' product.product.slug %}" type="button" class="remove-btn" style="color: black;"><i class="las la-times"></i></a>
+                        </li>
+                        <li>
+                          <div class="product-image">
+                            <img style="width: 80px; max-width: 100%; height: 100px;" src="{{product.product.main_image.url}}" alt="pill_image_not_found" />
+                          </div>
+                        </li>
+                        <li>
+                          <h4 class="item-title" style="color:black;">{{product.product.title}}</h4>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="item-price">{% trans "EG" %}{{product.product.price}}</span>
+                  </td>
+                  <td>
+                    <div class="quantity-input">
+                      <form action="#">
+                        <span class="input-number-decrement-{{product.id}}">–</span>
+                        <input class="input-number-1-{{ product.id }}" type="text" value="{{ product.quantity }}" data-product-id="{{ product.product.id }}" />
+                        <span class="input-number-increment-{{product.id}}">+</span>
+                      </form>
+                    </div>
+                  </td>
+                  <td>
+                    <strong class="item-price">{% trans "EG" %}{{product.product.price}}</strong>
+                  </td>
+                </tr>
+              </tbody>
+              {% endfor %}
+            </table>
+          </div>
+
+          <div class="cuponcode-form mb-70">
+            <div class="row justify-content-lg-between justify-content-md-center justify-content-sm-center">
+              <div class="col-lg-4 col-md-7 col-sm-10 col-xs-12">
+                {% comment %} <form action="#">
+                  <div class="form-item mb-0">
+                    <input type="text" name="cupon" placeholder="cupon code" />
+                    <button type="submit" class="btn bg-royal-blue">{% trans "Apply now" %}</button>
+                  </div>
+                </form> {% endcomment %}
+              </div>
+
+              <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12">
+                <div class="btns-group ul-li-right">
+                  <ul class="clearfix">
+                    <li>
+                      <a href="{% url 'product:product' %}" class="btn bg-default-black">{% trans "Continue Shopping" %}</a>
+                    </li>
+                    <li>
+                      <button class="btn bg-royal-blue" id="update_cart">{% trans "Update Cart" %}</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row total">
+            <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+              <div class="total-cost-bar mb-30 clearfix">
+                <h3 class="title-text mb-0">{% trans "Total Cost" %}</h3>
+                <div class="cost-info ul-li-block clearfix">
+                  <ul class="clearfix">
+                    <li>
+                      <strong>{% trans "Subtotal" %}</strong> <span id="sub_total">{% trans "EG" %}{{total_price}}</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="total-cost clearfix">
+                  <strong>{% trans "Total" %}</strong>
+                  <span id="total_price">{% trans "EG" %}{{total_price_after_discount}}</span>
+                </div>
+              </div>
+              <div class="btn-wrap text-right">
+                <a href="{% url 'product:initiate_payment' %}" class="btn bg-royal-blue">{% trans "Proceed to Checkout" %}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  cart-section - end
+			==================================================  -->
+    </main>
+    <!--  main body - end
+		==================================================  -->
+
+    {% include 'components/footer.html' %}
+
+    {% block script %}
+    <!--  price calculation  -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          function updatePrices() {
+              let subtotal = 0;
+      
+              document.querySelectorAll(".quantity-input").forEach(function (container) {
+                  const quantityInput = container.querySelector("[class^='input-number-1']");
+                  const priceElement = container.closest("tr").querySelector(".item-price");
+                  const totalElement = container.closest("tr").querySelector("strong.item-price");
+      
+                  const pricePerUnit = parseFloat(priceElement.textContent.replace("EG", "")); // Extract price
+                  const quantity = parseInt(quantityInput.value) || 1;
+                  const totalPrice = (pricePerUnit * quantity).toFixed(2);
+      
+                  totalElement.textContent = `EG${totalPrice}`;
+                  subtotal += parseFloat(totalPrice);
+              });
+      
+              // Update Subtotal & Total
+              document.getElementById("sub_total").textContent = `EG${subtotal.toFixed(2)}`;
+              document.getElementById("total_price").textContent = `EG${subtotal.toFixed(2)}`; // Assuming no discount
+          }
+      
+          document.querySelectorAll(".quantity-input").forEach(function (container) {
+              const decrementBtn = container.querySelector("[class^='input-number-decrement']");
+              const incrementBtn = container.querySelector("[class^='input-number-increment']");
+              const quantityInput = container.querySelector("[class^='input-number-1']");
+      
+              decrementBtn.addEventListener("click", function () {
+                  let currentQuantity = parseInt(quantityInput.value) || 1;
+                  if (currentQuantity > 1) {
+                      quantityInput.value = currentQuantity - 1;
+                      updatePrices();
+                  }
+              });
+      
+              incrementBtn.addEventListener("click", function () {
+                  let currentQuantity = parseInt(quantityInput.value) || 1;
+                  quantityInput.value = currentQuantity + 1;
+                  updatePrices();
+              });
+      
+              quantityInput.addEventListener("input", function () {
+                  updatePrices();
+              });
+          });
+      
+          // Initialize prices on page load
+          updatePrices();
+      });
+      </script>
+
+
+      <!--update card ajax-->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          document.getElementById("update_cart").addEventListener("click", function (e) {
+              e.preventDefault();
+      
+              let items = [];
+      
+              document.querySelectorAll(".quantity-input").forEach(function (container) {
+                  const quantityInput = container.querySelector("input");
+                  const productId = quantityInput.dataset.productId;
+                  const quantity = parseInt(quantityInput.value) || 1;
+      
+                  items.push({ product_id: productId, quantity: quantity });
+              });
+      
+              items.forEach(item => {
+                  let formData = new FormData();
+                  formData.append("product_id", item.product_id);
+                  formData.append("quantity", item.quantity);
+      
+                  fetch("{% url 'product:update_cart' %}", {
+                      method: "POST",
+                      body: formData,
+                      headers: {
+                          "X-CSRFToken": getCookie("csrftoken"), // Ensure CSRF token is included
+                      },
+                  })
+                  .then(response => response.json())
+                  .then(data => {
+                      if (data.status === "success") {
+                          // refresh page 
+                          location.reload();
+                      } else {
+                          alert("Error updating cart!");
+                      }
+                  })
+                  .catch(error => console.error("Error:", error));
+              });
+          });
+      });
+      
+      // Function to get CSRF token
+      function getCookie(name) {
+          let cookieValue = null;
+          if (document.cookie && document.cookie !== "") {
+              let cookies = document.cookie.split(";");
+              for (let i = 0; i < cookies.length; i++) {
+                  let cookie = cookies[i].trim();
+                  if (cookie.substring(0, name.length + 1) === name + "=") {
+                      cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                      break;
+                  }
+              }
+          }
+          return cookieValue;
+      }
+      
+      </script>
+    {% endblock %}
+
+    {% endblock %}

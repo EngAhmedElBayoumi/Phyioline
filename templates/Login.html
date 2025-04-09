@@ -1,0 +1,96 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% trans "Login" %} / {% trans "Signup" %}</title>
+    <link rel="stylesheet" href="{% static 'assets/css/login.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="row full-screen align-items-center">
+          <div class="left">
+            <img src="{% static 'assets/images/LOGO PHYSIOLINE SVG 1 (2).svg' %}" width="100%" alt="" />
+          </div>
+          <div class="right">
+            <div class="form">
+              <div class="text-center">
+                <h6><span>{% trans "Log In" %}</span> <span>{% trans "Sign Up" %}</span></h6>
+                <input type="checkbox" class="checkbox" id="reg-log" />
+                <label for="reg-log"></label>
+                <div class="card-3d-wrap">
+                  <div class="card-3d-wrapper">
+                    <div class="card-front">
+                      <div class="center-wrap">
+                        <h4 class="heading">{% trans "Log In" %}</h4>
+                        <form  method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="login">
+                        <div class="form-group">
+                          <input type="email" name="email" class="form-style" placeholder="{% trans 'Your Email' %}" autocomplete="off" />
+                          <i class="input-icon material-icons">{% trans "alternate_email" %}</i>
+                        </div>
+
+                        <div class="form-group">
+                          <input type="password" name="password" class="form-style" placeholder="{% trans 'Your Password' %}" autocomplete="off" />
+                          <i class="input-icon material-icons">{% trans "lock" %}</i>
+                        </div>
+
+                        <button type="submit" class="btn">{% trans "Submit" %}</button>
+                        <p class="text-center">
+                          <a href="#" class="link">{% trans "Forgot your password?" %}</a>
+                        </p>
+                        </form>
+                      </div>
+                    </div>
+
+                    <div class="card-back" style="height: 120%;">
+                      <div class="center-wrap">
+                        <form method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="signup">
+                        <h4 class="heading">{% trans "Sign Up" %}</h4>
+                        <div class="form-group">
+                          <input type="text" name="name" class="form-style" placeholder="{% trans 'Your Name' %}" autocomplete="off" />
+                          <i class="input-icon material-icons">{% trans "perm_identity" %}</i>
+                        </div>
+
+                        <div class="form-group">
+                          <input type="text" name="phone" class="form-style" placeholder="{% trans 'Phone' %}" autocomplete="off" />
+                          <i class="input-icon material-icons">{% trans "perm_identity" %}</i>
+                        </div>
+
+                        <div class="form-group">
+                          <input type="email" name="email" class="form-style" placeholder="{% trans 'Your Email' %}" autocomplete="off" />
+                          <i class="input-icon material-icons">{% trans "alternate_email" %}</i>
+                        </div>
+
+                        <div class="form-group">
+                          <input type="password" name="password" class="form-style" placeholder="{% trans 'Your Password' %}" autocomplete="off" />
+                          <i class="input-icon material-icons">{% trans "lock" %}</i>
+                        </div>
+                        <div class="form-group">
+                          <input type="password" name="confirm_password" class="form-style" placeholder="{% trans 'Confirm Password' %}" autocomplete="off" />
+                          <i class="input-icon material-icons">{% trans "lock" %}</i>
+                        </div>
+
+                        <button type="submit" class="btn">{% trans "Sign Up" %}</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

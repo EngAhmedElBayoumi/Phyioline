@@ -1,0 +1,3278 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-03 10:02+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: .\account\admin.py:21
+msgid "email"
+msgstr "البريد الإلكتروني"
+
+#: .\account\admin.py:21
+msgid "password"
+msgstr "كلمة المرور"
+
+#: .\account\admin.py:21
+msgid "type"
+msgstr "النوع"
+
+#: .\account\admin.py:23
+msgid "Personal info"
+msgstr "المعلومات الشخصية"
+
+#: .\account\admin.py:24
+msgid "first_name"
+msgstr "الاسم الأول"
+
+#: .\account\admin.py:24
+msgid "last_name"
+msgstr "الاسم الأخير"
+
+#: .\account\admin.py:24
+msgid "username"
+msgstr "اسم المستخدم"
+
+#: .\account\admin.py:24
+msgid "phone"
+msgstr "الهاتف"
+
+#: .\account\admin.py:26
+msgid "Permissions"
+msgstr "الأذونات"
+
+#: .\account\admin.py:28
+msgid "is_active"
+msgstr "فعال"
+
+#: .\account\admin.py:29
+msgid "is_staff"
+msgstr "مسؤل"
+
+#: .\account\admin.py:30
+msgid "is_superuser"
+msgstr "مدير الموقع"
+
+#: .\account\admin.py:31 .\account\admin.py:40
+msgid "groups"
+msgstr "مجموعات المستخدمين"
+
+#: .\account\admin.py:32 .\account\admin.py:40
+msgid "user_permissions"
+msgstr "أذونات المستخدمين"
+
+#: .\account\admin.py:35
+msgid "Important dates"
+msgstr ""
+
+#: .\account\admin.py:36
+msgid "last_login"
+msgstr "اخر عملية تسجيل الدخول"
+
+#: .\account\admin.py:36
+msgid "date_joined"
+msgstr "تاريخ الانضمام"
+
+#: .\account\apps.py:7
+msgid "Account"
+msgstr "المستخدمين"
+
+#: .\account\models.py:14
+msgid "admin"
+msgstr "مسؤل"
+
+#: .\account\models.py:15
+msgid "suplier"
+msgstr "دجاجة"
+
+#: .\account\models.py:16
+msgid "client"
+msgstr "عميل"
+
+#: .\account\models.py:20 .\product\models.py:102
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: .\account\models.py:24
+msgid "Type"
+msgstr "النوع"
+
+#: .\account\models.py:25 .\product\models.py:223 .\templates\Login.html:65
+msgid "Phone"
+msgstr "هاتف"
+
+#: .\account\models.py:31 .\account\models.py:43
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\admin\guardian\model\obj_perms_manage_user.html:43
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\unfold\guardian\group_form.html:33
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\unfold\guardian\user_form.html:15
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\unfold\guardian\user_form.html:33
+#: .\env\Lib\site-packages\unfold\templates\admin\object_history.html:38
+#: .\env\Lib\site-packages\unfold\templates\admin\object_history.html:54
+#: .\product\models.py:127 .\product\models.py:156 .\product\models.py:195
+msgid "User"
+msgstr "مستخدم"
+
+#: .\account\models.py:32
+msgid "Users"
+msgstr "المستخدمين"
+
+#: .\account\models.py:36
+msgid "pending"
+msgstr "قيد الإنتظار"
+
+#: .\account\models.py:37
+msgid "approved"
+msgstr "موافقة"
+
+#: .\account\models.py:38
+msgid "rejected"
+msgstr "مرفوض"
+
+#: .\account\models.py:44 .\product\models.py:199 .\product\models.py:221
+msgid "Status"
+msgstr "الحالة"
+
+#: .\account\models.py:45
+msgid "Resoan"
+msgstr "السبب"
+
+#: .\account\models.py:46 .\product\models.py:58 .\product\models.py:129
+#: .\product\models.py:159 .\product\models.py:197 .\product\models.py:219
+msgid "Created At"
+msgstr "تم إنشاؤها في"
+
+#: .\account\models.py:47 .\product\models.py:59 .\product\models.py:160
+#: .\product\models.py:198 .\product\models.py:220
+msgid "Updated At"
+msgstr "تم التحديث في"
+
+#: .\account\models.py:49
+msgid "Account Statement"
+msgstr "بيان الحساب"
+
+#: .\account\models.py:50
+msgid "Commercial Register"
+msgstr "السجل التجاري"
+
+#: .\account\models.py:51
+msgid "Tax Card"
+msgstr "بطاقة الضرائب"
+
+#: .\account\models.py:52
+msgid "ID Card"
+msgstr "بطاقة الهوية"
+
+#: .\account\models.py:88
+msgid "Suplier Request"
+msgstr "طلب المورد"
+
+#: .\account\models.py:89
+msgid "Suplier Requests"
+msgstr "طلبات الموردين"
+
+#: .\account\views.py:19
+msgid "Logged in successfully"
+msgstr "تسجيل الدخول بنجاح"
+
+#: .\account\views.py:22
+msgid "Invalid username or password"
+msgstr "اسم مستخدم غير صالح أو كلمة مرور"
+
+#: .\account\views.py:33 .\home\views.py:73
+msgid "Passwords do not match"
+msgstr "كلمات المرور لا تتطابق"
+
+#: .\account\views.py:38
+msgid "Please fill in all fields"
+msgstr "يرجى ملء جميع الحقول"
+
+#: .\account\views.py:42 .\home\views.py:77
+msgid "Email already exists"
+msgstr "البريد الإلكتروني موجود بالفعل"
+
+#: .\account\views.py:47
+msgid "Account created successfully"
+msgstr "الحساب الذي تم إنشاؤه بنجاح"
+
+#: .\env\Lib\site-packages\ckeditor_uploader\forms.py:6
+msgid "Search files"
+msgstr "ملفات البحث"
+
+#: .\env\Lib\site-packages\ckeditor_uploader\templates\ckeditor\browse.html:5
+msgid "Select an image to embed"
+msgstr "حدد صورة للتضمين"
+
+#: .\env\Lib\site-packages\ckeditor_uploader\templates\ckeditor\browse.html:27
+msgid "Browse for the image you want, then click 'Embed Image' to continue..."
+msgstr "تصفح للصورة التي تريدها ، ثم انقر فوق \"تضمين الصورة\" للمتابعة ..."
+
+#: .\env\Lib\site-packages\ckeditor_uploader\templates\ckeditor\browse.html:29
+msgid ""
+"No images found. Upload images using the 'Image Button' dialog's 'Upload' "
+"tab."
+msgstr ""
+"لم يتم العثور على صور.قم بتحميل الصور باستخدام علامة التبويب \"تحميل\" زر "
+"\"زر\"."
+
+#: .\env\Lib\site-packages\ckeditor_uploader\templates\ckeditor\browse.html:50
+msgid "Images in: "
+msgstr "الصور في:"
+
+#: .\env\Lib\site-packages\ckeditor_uploader\templates\ckeditor\browse.html:62
+#: .\env\Lib\site-packages\ckeditor_uploader\templates\ckeditor\browse.html:80
+msgid "Embed Image"
+msgstr "تضمين الصورة"
+
+#: .\env\Lib\site-packages\ckeditor_uploader\templates\ckeditor\browse.html:146
+msgid "Play Slideshow"
+msgstr "لعب عرض الشرائح"
+
+#: .\env\Lib\site-packages\ckeditor_uploader\templates\ckeditor\browse.html:147
+msgid "Pause Slideshow"
+msgstr "وقفة عرض الشرائح"
+
+#: .\env\Lib\site-packages\ckeditor_uploader\templates\ckeditor\browse.html:148
+msgid "&lsaquo; Previous Photo"
+msgstr "& lsaquo ؛الصورة السابقة"
+
+#: .\env\Lib\site-packages\ckeditor_uploader\templates\ckeditor\browse.html:149
+msgid "Next Photo &rsaquo;"
+msgstr "الصورة التالية & rsaquo ؛"
+
+#: .\env\Lib\site-packages\ckeditor_uploader\templates\ckeditor\browse.html:150
+msgid "Next &rsaquo;"
+msgstr "التالي & rsaquo ؛"
+
+#: .\env\Lib\site-packages\ckeditor_uploader\templates\ckeditor\browse.html:151
+msgid "&lsaquo; Prev"
+msgstr "& lsaquo ؛السابق"
+
+#: .\env\Lib\site-packages\django\contrib\messages\apps.py:16
+msgid "Messages"
+msgstr "رسائل"
+
+#: .\env\Lib\site-packages\django\contrib\sitemaps\apps.py:8
+msgid "Site Maps"
+msgstr "خرائط الموقع"
+
+#: .\env\Lib\site-packages\django\contrib\staticfiles\apps.py:9
+msgid "Static Files"
+msgstr "ملفات ثابتة"
+
+#: .\env\Lib\site-packages\django\contrib\syndication\apps.py:7
+msgid "Syndication"
+msgstr "المشاركة"
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: .\env\Lib\site-packages\django\core\paginator.py:30
+msgid "…"
+msgstr "..."
+
+#: .\env\Lib\site-packages\django\core\paginator.py:32
+msgid "That page number is not an integer"
+msgstr "رقم الصفحة هذا ليس عددًا صحيحًا"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:33
+msgid "That page number is less than 1"
+msgstr "رقم الصفحة أقل من 1"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:34
+msgid "That page contains no results"
+msgstr "لا تحتوي تلك الصفحة على أي نتائج"
+
+#: .\env\Lib\site-packages\django\core\validators.py:22
+msgid "Enter a valid value."
+msgstr "أدخل قيمة صالحة."
+
+#: .\env\Lib\site-packages\django\core\validators.py:70
+msgid "Enter a valid domain name."
+msgstr "أدخل اسم مجال صالح."
+
+#: .\env\Lib\site-packages\django\core\validators.py:155
+#: .\env\Lib\site-packages\django\forms\fields.py:768
+msgid "Enter a valid URL."
+msgstr "أدخل عنوان URL صالحًا."
+
+#: .\env\Lib\site-packages\django\core\validators.py:216
+msgid "Enter a valid integer."
+msgstr "أدخل عدد صحيح صالح."
+
+#: .\env\Lib\site-packages\django\core\validators.py:227
+msgid "Enter a valid email address."
+msgstr "أدخل عنوان بريد إلكتروني صالح."
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: .\env\Lib\site-packages\django\core\validators.py:310
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:318
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:330
+#: .\env\Lib\site-packages\django\core\validators.py:339
+#: .\env\Lib\site-packages\django\core\validators.py:353
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2215
+#, python-format
+msgid "Enter a valid %(protocol)s address."
+msgstr "أدخل عنوان %(protocol)s صالح."
+
+#: .\env\Lib\site-packages\django\core\validators.py:332
+msgid "IPv4"
+msgstr "IPv4"
+
+#: .\env\Lib\site-packages\django\core\validators.py:341
+#: .\env\Lib\site-packages\django\utils\ipv6.py:43
+msgid "IPv6"
+msgstr "IPv6"
+
+#: .\env\Lib\site-packages\django\core\validators.py:355
+msgid "IPv4 or IPv6"
+msgstr "IPv4 أو IPv6"
+
+#: .\env\Lib\site-packages\django\core\validators.py:396
+msgid "Enter only digits separated by commas."
+msgstr "أدخل الأرقام فقط مفصولة بفواصل."
+
+#: .\env\Lib\site-packages\django\core\validators.py:402
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:437
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:446
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:455
+#, python-format
+msgid "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr "تأكد من أن هذه القيمة هي مضاعف حجم الخطوة ٪ (limit_value) s."
+
+#: .\env\Lib\site-packages\django\core\validators.py:462
+#, python-format
+msgid ""
+"Ensure this value is a multiple of step size %(limit_value)s, starting from "
+"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
+msgstr ""
+"تأكد من أن هذه القيمة هي مضاعف حجم الخطوة ٪ (limit_value) s ، بدءًا من ٪ "
+"(الإزاحة) s ، على سبيل المثال٪ (الإزاحة) s ، ٪ (alight_value1) s ، ٪ "
+"(alval_value2) s ، وهكذا."
+
+#: .\env\Lib\site-packages\django\core\validators.py:494
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:512
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:535
+#: .\env\Lib\site-packages\django\forms\fields.py:359
+#: .\env\Lib\site-packages\django\forms\fields.py:398
+msgid "Enter a number."
+msgstr "أدخل رقمًا."
+
+#: .\env\Lib\site-packages\django\core\validators.py:537
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:542
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:547
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:618
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:680
+msgid "Null characters are not allowed."
+msgstr "الشخصيات الفارغة غير مسموح بها."
+
+#: .\env\Lib\site-packages\django\db\models\base.py:1572
+#: .\env\Lib\site-packages\django\forms\models.py:908
+#: .\env\Lib\site-packages\unfold\contrib\inlines\admin.py:103
+msgid "and"
+msgstr "و"
+
+#: .\env\Lib\site-packages\django\db\models\base.py:1574
+#, fuzzy, python-format
+#| msgid "%(model_name)s with this %(field_label)s already exists."
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr "%(model_name)s مع هذا %(field_label)s موجود بالفعل."
+
+#: .\env\Lib\site-packages\django\db\models\constraints.py:22
+#, python-format
+msgid "Constraint “%(name)s” is violated."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:134
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr "القيمة %(value)r ليست خيارًا صالحًا."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:135
+msgid "This field cannot be null."
+msgstr "لا يمكن أن يكون هذا الحقل فارغًا."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:136
+msgid "This field cannot be blank."
+msgstr "لا يمكن أن يكون هذا الحقل فارغًا."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:137
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr "%(model_name)s مع هذا %(field_label)s موجود بالفعل."
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or
+#. 'month'. Eg: "Title must be unique for pub_date year"
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:141
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+"يجب أن تكون %(field_label)s فريدة من نوعها لـ %(date_field_label)s "
+"%(lookup_type)s."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:180
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr "حقل النوع: %(field_type)s"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1156
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1157
+#, fuzzy, python-format
+#| msgid "Boolean (Either True, False or None)"
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr "منطقية (إما صحيحة أو خاطئة أو لا شيء)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1159
+msgid "Boolean (Either True or False)"
+msgstr "منطقية (إما صحيحة أو خاطئة)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1209
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr "سلسلة (حتى %(max_length)s)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1211
+msgid "String (unlimited)"
+msgstr "سلسلة (غير محدودة)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1320
+msgid "Comma-separated integers"
+msgstr "الأعداد الصحيحة مفصولة فاصلة"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1421
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1425
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1560
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1429
+msgid "Date (without time)"
+msgstr "التاريخ (بدون وقت)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1556
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1564
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1569
+msgid "Date (with time)"
+msgstr "التاريخ (مع مرور الوقت)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1696
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1698
+msgid "Decimal number"
+msgstr "رقم"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1859
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1863
+msgid "Duration"
+msgstr "مدة"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1915
+msgid "Email address"
+msgstr "عنوان البريد الإلكتروني"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1940
+msgid "File path"
+msgstr "مسار الملف"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2018
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2020
+msgid "Floating point number"
+msgstr "رقم نقطة العائمة"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2060
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2062
+msgid "Integer"
+msgstr "عدد صحيح"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2158
+msgid "Big (8 byte) integer"
+msgstr "عدد صحيح (8 بايت)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2175
+msgid "Small integer"
+msgstr "عدد صحيح صغير"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2183
+msgid "IPv4 address"
+msgstr "عنوان IPv4"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2214
+msgid "IP address"
+msgstr "عنوان IP"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2305
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2306
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2308
+msgid "Boolean (Either True, False or None)"
+msgstr "منطقية (إما صحيحة أو خاطئة أو لا شيء)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2359
+msgid "Positive big integer"
+msgstr "عدد صحيح إيجابي"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2374
+msgid "Positive integer"
+msgstr "عدد صحيح إيجابي"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2389
+msgid "Positive small integer"
+msgstr "عدد صحيح إيجابي"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2405
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr "Slug (حتى %(max_length)s)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2441
+msgid "Text"
+msgstr "نص"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2521
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2525
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2529
+#: .\env\Lib\site-packages\unfold\contrib\filters\forms.py:225
+#: .\env\Lib\site-packages\unfold\contrib\filters\forms.py:241
+#: .\env\Lib\site-packages\unfold\widgets.py:499
+#: .\env\Lib\site-packages\unfold\widgets.py:537
+msgid "Time"
+msgstr "وقت"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2637
+msgid "URL"
+msgstr "عنوان URL"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2661
+msgid "Raw binary data"
+msgstr "البيانات الثنائية الخام"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2726
+#, fuzzy, python-format
+#| msgid "Value %(value)r is not a valid choice."
+msgid "“%(value)s” is not a valid UUID."
+msgstr "القيمة %(value)r ليست خيارًا صالحًا."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2728
+msgid "Universally unique identifier"
+msgstr "معرف فريد عالمي"
+
+#: .\env\Lib\site-packages\django\db\models\fields\files.py:244
+msgid "File"
+msgstr "ملف"
+
+#: .\env\Lib\site-packages\django\db\models\fields\files.py:420
+#: .\home\models.py:12 .\product\models.py:36 .\product\models.py:43
+msgid "Image"
+msgstr "صورة"
+
+#: .\env\Lib\site-packages\django\db\models\fields\json.py:24
+msgid "A JSON object"
+msgstr "كائن JSON"
+
+#: .\env\Lib\site-packages\django\db\models\fields\json.py:26
+msgid "Value must be valid JSON."
+msgstr "يجب أن تكون القيمة صالحة JSON."
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:932
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr "٪ (النموذج) مثيل مع ٪ (الحقل) s ٪ (القيمة) r غير موجود."
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:934
+msgid "Foreign Key (type determined by related field)"
+msgstr "المفتاح الخارجي (النوع الذي يحدده الحقل ذي الصلة)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1228
+msgid "One-to-one relationship"
+msgstr "علاقة فردية"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1285
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr "٪ (من) s-٪ (إلى) العلاقة s"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1287
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr "٪ (من) S-٪ (إلى) العلاقات"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1335
+msgid "Many-to-many relationship"
+msgstr "العديد من العلاقة إلى الرجل"
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: .\env\Lib\site-packages\django\forms\boundfield.py:185
+msgid ":?.!"
+msgstr ":؟!"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:95
+msgid "This field is required."
+msgstr "هذه الخانة مطلوبه."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:308
+msgid "Enter a whole number."
+msgstr "أدخل رقمًا كاملاً."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:479
+#: .\env\Lib\site-packages\django\forms\fields.py:1260
+msgid "Enter a valid date."
+msgstr "أدخل تاريخ صالح."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:502
+#: .\env\Lib\site-packages\django\forms\fields.py:1261
+msgid "Enter a valid time."
+msgstr "أدخل وقتًا صالحًا."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:529
+msgid "Enter a valid date/time."
+msgstr "أدخل تاريخ/وقت صالح."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:563
+msgid "Enter a valid duration."
+msgstr "أدخل مدة صالحة."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:564
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr "يجب أن يكون عدد الأيام بين {min_days} و {max_days}."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:633
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr "لم يتم تقديم أي ملف.تحقق من نوع الترميز على النموذج."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:634
+msgid "No file was submitted."
+msgstr "لم يتم تقديم أي ملف."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:635
+msgid "The submitted file is empty."
+msgstr "الملف المقدم فارغ."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:637
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:642
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr "يرجى إما إرسال ملف أو التحقق من مربع الاختيار الواضح ، وليس كلاهما."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:710
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr "تحميل صورة صالحة.الملف الذي قمت بتحميله إما ليس صورة أو صورة تالفة."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:882
+#: .\env\Lib\site-packages\django\forms\fields.py:968
+#: .\env\Lib\site-packages\django\forms\models.py:1592
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "حدد خيارًا صالحًا.٪ (القيمة) S ليست واحدة من الخيارات المتاحة."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:970
+#: .\env\Lib\site-packages\django\forms\fields.py:1089
+#: .\env\Lib\site-packages\django\forms\models.py:1590
+msgid "Enter a list of values."
+msgstr "أدخل قائمة بالقيم."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1090
+msgid "Enter a complete value."
+msgstr "أدخل قيمة كاملة."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1332
+msgid "Enter a valid UUID."
+msgstr "أدخل uuid صالح."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1362
+msgid "Enter a valid JSON."
+msgstr "أدخل JSON صالح."
+
+#. Translators: This is the default suffix added to form field labels
+#: .\env\Lib\site-packages\django\forms\forms.py:94
+msgid ":"
+msgstr ":"
+
+#: .\env\Lib\site-packages\django\forms\forms.py:230
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr "(الحقل المخفي %(name)s) %(error)s"
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:61
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+"بيانات نموذج الإدارة مفقودة أو تم العبث بها. الحقول المفقودة: "
+"%(field_names)s. قد تحتاج إلى تقديم تقرير خطأ إذا استمرت المشكلة."
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:65
+#, python-format
+msgid "Please submit at most %(num)d form."
+msgid_plural "Please submit at most %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:70
+#, python-format
+msgid "Please submit at least %(num)d form."
+msgid_plural "Please submit at least %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:484
+#: .\env\Lib\site-packages\django\forms\formsets.py:491 .\product\models.py:211
+#: .\product\models.py:216
+msgid "Order"
+msgstr "طلب"
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:499
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import_preview.html:26
+#: .\env\Lib\site-packages\unfold\templates\admin\submit_line.html:62
+msgid "Delete"
+msgstr "يمسح"
+
+#: .\env\Lib\site-packages\django\forms\models.py:901
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr "يرجى تصحيح البيانات المكررة للحقل %(field)s."
+
+#: .\env\Lib\site-packages\django\forms\models.py:906
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr "يرجى تصحيح البيانات المكررة للحقل %(field)s، والذي يجب أن يكون فريداً."
+
+#: .\env\Lib\site-packages\django\forms\models.py:913
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+"يرجى تصحيح البيانات المكررة للحقل %(field_name)s والذي يجب أن يكون فريداً للـ "
+"%(lookup)s في %(date_field)s."
+
+#: .\env\Lib\site-packages\django\forms\models.py:922
+msgid "Please correct the duplicate values below."
+msgstr "يرجى تصحيح القيم المكررة أدناه."
+
+#: .\env\Lib\site-packages\django\forms\models.py:1359
+msgid "The inline value did not match the parent instance."
+msgstr "لا تتطابق القيمة المضمنة مع مثيل الأصل."
+
+#: .\env\Lib\site-packages\django\forms\models.py:1450
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr "حدد خيارًا صالحًا.هذا الاختيار ليس أحد الخيارات المتاحة."
+
+#: .\env\Lib\site-packages\django\forms\models.py:1594
+#, fuzzy, python-format
+#| msgid "Enter a valid value."
+msgid "“%(pk)s” is not a valid value."
+msgstr "أدخل قيمة صالحة."
+
+#: .\env\Lib\site-packages\django\forms\utils.py:227
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:461
+msgid "Clear"
+msgstr "واضح"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:462
+msgid "Currently"
+msgstr "حالياً"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:463
+#: .\env\Lib\site-packages\unfold\templates\admin\edit_inline\stacked.html:57
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\app_list_default.html:42
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\edit_inline\tabular_title.html:23
+msgid "Change"
+msgstr "يتغير"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:800
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\boolean.html:8
+msgid "Unknown"
+msgstr "مجهول"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:801
+msgid "Yes"
+msgstr "نعم"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:802
+msgid "No"
+msgstr "لا"
+
+#. Translators: Please do not add spaces around commas.
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:873
+msgid "yes,no,maybe"
+msgstr "نعم ، لا ، ربما"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:903
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:920
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:922
+#, python-format
+msgid "%s KB"
+msgstr "٪ S KB"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:924
+#, python-format
+msgid "%s MB"
+msgstr "٪ S MB"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:926
+#, python-format
+msgid "%s GB"
+msgstr "٪ S GB"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:928
+#, python-format
+msgid "%s TB"
+msgstr "٪ s السل"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:930
+#, python-format
+msgid "%s PB"
+msgstr "٪ S PB"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:74
+msgid "p.m."
+msgstr "مساءً."
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:75
+msgid "a.m."
+msgstr "أكون."
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:80
+msgid "PM"
+msgstr "مساءً"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:81
+msgid "AM"
+msgstr "أكون"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:153
+msgid "midnight"
+msgstr "منتصف الليل"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:155
+msgid "noon"
+msgstr "ظهر"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:7
+msgid "Monday"
+msgstr "الاثنين"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:8
+msgid "Tuesday"
+msgstr "يوم الثلاثاء"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:9
+msgid "Wednesday"
+msgstr "الأربعاء"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:10
+msgid "Thursday"
+msgstr "يوم الخميس"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:11
+msgid "Friday"
+msgstr "جمعة"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:12
+msgid "Saturday"
+msgstr "السبت"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:13
+msgid "Sunday"
+msgstr "الأحد"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:16
+msgid "Mon"
+msgstr "الاثنين"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:17
+msgid "Tue"
+msgstr "الثلاثاء"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:18
+msgid "Wed"
+msgstr "تزوج"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:19
+msgid "Thu"
+msgstr "الخميس"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:20
+msgid "Fri"
+msgstr "الجمعة"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:21
+msgid "Sat"
+msgstr "قعد"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:22
+msgid "Sun"
+msgstr "شمس"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:25
+msgid "January"
+msgstr "يناير"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:26
+msgid "February"
+msgstr "فبراير"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:27
+msgid "March"
+msgstr "يمشي"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:28
+msgid "April"
+msgstr "أبريل"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:29
+msgid "May"
+msgstr "يمكن"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:30
+msgid "June"
+msgstr "يونيو"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:31
+msgid "July"
+msgstr "يوليو"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:32
+msgid "August"
+msgstr "أغسطس"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:33
+msgid "September"
+msgstr "سبتمبر"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:34
+msgid "October"
+msgstr "أكتوبر"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:35
+msgid "November"
+msgstr "نوفمبر"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:36
+msgid "December"
+msgstr "ديسمبر"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:39
+msgid "jan"
+msgstr "يناير"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:40
+msgid "feb"
+msgstr "فبراير"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:41
+msgid "mar"
+msgstr "مارس"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:42
+msgid "apr"
+msgstr "أبريل"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:43
+msgid "may"
+msgstr "يمكن"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:44
+msgid "jun"
+msgstr "يونيو"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:45
+msgid "jul"
+msgstr "يوليو"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:46
+msgid "aug"
+msgstr "أغسطس"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:47
+msgid "sep"
+msgstr "سبتمبر"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:48
+msgid "oct"
+msgstr "أكتوبر"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:49
+msgid "nov"
+msgstr "نوفمبر"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:50
+msgid "dec"
+msgstr "ديسمبر"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:53
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr "يناير."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:54
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr "فبراير"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:55
+msgctxt "abbrev. month"
+msgid "March"
+msgstr "يمشي"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:56
+msgctxt "abbrev. month"
+msgid "April"
+msgstr "أبريل"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:57
+msgctxt "abbrev. month"
+msgid "May"
+msgstr "يمكن"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:58
+msgctxt "abbrev. month"
+msgid "June"
+msgstr "يونيو"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:59
+msgctxt "abbrev. month"
+msgid "July"
+msgstr "يوليو"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:60
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr "أغسطس"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:61
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr "سبتمبر."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:62
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr "أكتوبر."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:63
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr "نوفمبر."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:64
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr "ديسمبر"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:67
+msgctxt "alt. month"
+msgid "January"
+msgstr "يناير"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:68
+msgctxt "alt. month"
+msgid "February"
+msgstr "فبراير"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:69
+msgctxt "alt. month"
+msgid "March"
+msgstr "يمشي"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:70
+msgctxt "alt. month"
+msgid "April"
+msgstr "أبريل"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:71
+msgctxt "alt. month"
+msgid "May"
+msgstr "يمكن"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:72
+msgctxt "alt. month"
+msgid "June"
+msgstr "يونيو"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:73
+msgctxt "alt. month"
+msgid "July"
+msgstr "يوليو"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:74
+msgctxt "alt. month"
+msgid "August"
+msgstr "أغسطس"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:75
+msgctxt "alt. month"
+msgid "September"
+msgstr "سبتمبر"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:76
+msgctxt "alt. month"
+msgid "October"
+msgstr "أكتوبر"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:77
+msgctxt "alt. month"
+msgid "November"
+msgstr "نوفمبر"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:78
+msgctxt "alt. month"
+msgid "December"
+msgstr "ديسمبر"
+
+#: .\env\Lib\site-packages\django\utils\ipv6.py:20
+msgid "This is not a valid IPv6 address."
+msgstr "هذا ليس عنوان IPv6 صالح."
+
+#: .\env\Lib\site-packages\django\utils\text.py:67
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr "٪ (truncated_text) s ..."
+
+#: .\env\Lib\site-packages\django\utils\text.py:278
+msgid "or"
+msgstr "أو"
+
+#. Translators: This string is used as a separator between list elements
+#: .\env\Lib\site-packages\django\utils\text.py:297
+#: .\env\Lib\site-packages\django\utils\timesince.py:135
+msgid ", "
+msgstr "و"
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:8
+#, python-format
+msgid "%(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:9
+#, python-format
+msgid "%(num)d month"
+msgid_plural "%(num)d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:10
+#, python-format
+msgid "%(num)d week"
+msgid_plural "%(num)d weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:11
+#, python-format
+msgid "%(num)d day"
+msgid_plural "%(num)d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:12
+#, python-format
+msgid "%(num)d hour"
+msgid_plural "%(num)d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:13
+#, python-format
+msgid "%(num)d minute"
+msgid_plural "%(num)d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:29
+msgid "Forbidden"
+msgstr "مُحرَّم"
+
+#: .\env\Lib\site-packages\django\views\csrf.py:30
+msgid "CSRF verification failed. Request aborted."
+msgstr "فشل التحقق من CSRF.طلب الإجهاض."
+
+#: .\env\Lib\site-packages\django\views\csrf.py:34
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:40
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:45
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+"\" …> for links to third-party sites."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:54
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:60
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:66
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:44
+msgid "No year specified"
+msgstr "لم يحدد السنة"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:64
+#: .\env\Lib\site-packages\django\views\generic\dates.py:115
+#: .\env\Lib\site-packages\django\views\generic\dates.py:214
+msgid "Date out of range"
+msgstr "تاريخ خارج النطاق"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:94
+msgid "No month specified"
+msgstr "لم يحدد شهر"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:147
+msgid "No day specified"
+msgstr "لم يحدد يوم"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:194
+msgid "No week specified"
+msgstr "لم يحدد أسبوع"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:349
+#: .\env\Lib\site-packages\django\views\generic\dates.py:380
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr "لا يوجد %(verbose_name_plural)s متاح"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:652
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+"%(verbose_name_plural)s المستقبلية غير متاحة لأن %(class_name)s.allow_future "
+"هو False."
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:692
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\detail.py:56
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr "لم يتم العثور على %(verbose_name)s يطابق الاستعلام"
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:70
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:77
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:169
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\static.py:49
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\static.py:51
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\static.py:68
+#: .\env\Lib\site-packages\django\views\templates\directory_index.html:8
+#: .\env\Lib\site-packages\django\views\templates\directory_index.html:11
+#, python-format
+msgid "Index of %(directory)s"
+msgstr "فهرس %(directory)s"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:7
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:204
+msgid "The install worked successfully! Congratulations!"
+msgstr "يعمل التثبيت بنجاح!مبروك!"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:206
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:208
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:217
+#, fuzzy
+#| msgid "Django administration"
+msgid "Django Documentation"
+msgstr "إدارة Django"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:218
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:226
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:227
+msgid "Get started with Django"
+msgstr "ابدأ مع Django"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:235
+msgid "Django Community"
+msgstr "مجتمع Django"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:236
+msgid "Connect, get help, or contribute"
+msgstr "قم بتوصيل أو الحصول على المساعدة أو المساهمة"
+
+#: .\env\Lib\site-packages\modeltranslation\widgets.py:32
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_list.html:74
+msgid "None"
+msgstr "لا أحد"
+
+#: .\env\Lib\site-packages\unfold\admin.py:29
+#: .\env\Lib\site-packages\unfold\templatetags\unfold_list.py:334
+msgid "Select record"
+msgstr "حدد السجل"
+
+#: .\env\Lib\site-packages\unfold\admin.py:151
+msgid "Select action"
+msgstr "حدد الإجراء"
+
+#: .\env\Lib\site-packages\unfold\contrib\filters\admin\dropdown_filters.py:22
+#: .\env\Lib\site-packages\unfold\contrib\filters\admin\mixins.py:45
+msgid "All"
+msgstr "الجميع"
+
+#: .\env\Lib\site-packages\unfold\contrib\filters\admin\dropdown_filters.py:28
+#: .\env\Lib\site-packages\unfold\contrib\filters\admin\dropdown_filters.py:61
+#: .\env\Lib\site-packages\unfold\contrib\filters\admin\dropdown_filters.py:91
+#: .\env\Lib\site-packages\unfold\contrib\filters\admin\mixins.py:148
+#: .\env\Lib\site-packages\unfold\contrib\filters\admin\text_filters.py:29
+#: .\env\Lib\site-packages\unfold\contrib\filters\admin\text_filters.py:60
+#: .\env\Lib\site-packages\unfold\contrib\filters\templates\unfold\filters\filters_date_range.html:5
+#: .\env\Lib\site-packages\unfold\contrib\filters\templates\unfold\filters\filters_datetime_range.html:5
+#: .\env\Lib\site-packages\unfold\contrib\filters\templates\unfold\filters\filters_numeric_range.html:5
+#: .\env\Lib\site-packages\unfold\contrib\filters\templates\unfold\filters\filters_numeric_single.html:5
+#: .\env\Lib\site-packages\unfold\contrib\filters\templates\unfold\filters\filters_numeric_slider.html:7
+#, python-format
+msgid "By %(filter_title)s"
+msgstr "بنسبة ٪ (filter_title) ق"
+
+#: .\env\Lib\site-packages\unfold\contrib\filters\forms.py:134
+msgid "Value"
+msgstr "قيمة"
+
+#: .\env\Lib\site-packages\unfold\contrib\filters\forms.py:148
+#: .\env\Lib\site-packages\unfold\contrib\filters\forms.py:186
+msgid "From"
+msgstr "من"
+
+#: .\env\Lib\site-packages\unfold\contrib\filters\forms.py:155
+#: .\env\Lib\site-packages\unfold\contrib\filters\forms.py:196
+msgid "To"
+msgstr "ل"
+
+#: .\env\Lib\site-packages\unfold\contrib\filters\forms.py:220
+msgid "Date from"
+msgstr "التاريخ من"
+
+#: .\env\Lib\site-packages\unfold\contrib\filters\forms.py:236
+msgid "Date to"
+msgstr "تاريخ ل"
+
+#: .\env\Lib\site-packages\unfold\contrib\filters\templates\unfold\filters\filters_numeric_slider.html:30
+msgid "Not enough data."
+msgstr "لا توجد بيانات كافية."
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\array.html:30
+msgid "Add new item"
+msgstr "أضف عنصرًا جديدًا"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:7
+msgid "Paragraph"
+msgstr "فقرة"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:11
+msgid "Underlined"
+msgstr "تحتها خط"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:15
+msgid "Bold"
+msgstr "عريض"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:19
+msgid "Italic"
+msgstr "مائل"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:23
+msgid "Strike"
+msgstr "يضرب"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:27
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:98
+msgid "Link"
+msgstr "وصلة"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:35
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:39
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:43
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:47
+msgid "Heading"
+msgstr "عنوان"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:55
+msgid "Quote"
+msgstr "يقتبس"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:59
+#: .\product\models.py:141
+msgid "Code"
+msgstr "شفرة"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:63
+msgid "Unordered list"
+msgstr "قائمة غير مرتبة"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:67
+msgid "Ordered list"
+msgstr "قائمة مرتبة"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:71
+msgid "Indent increase"
+msgstr "زيادة المسافة البادئة"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:75
+msgid "Indent decrease"
+msgstr "بادئة انخفاض"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:83
+msgid "Undo"
+msgstr "تراجع"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:87
+msgid "Redo"
+msgstr "إعادة"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:95
+msgid "Enter an URL"
+msgstr "أدخل عنوان URL"
+
+#: .\env\Lib\site-packages\unfold\contrib\forms\templates\unfold\forms\helpers\toolbar.html:102
+msgid "Unlink"
+msgstr "إلغاء ارتباط"
+
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\admin\guardian\model\change_form.html:8
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\admin\guardian\model\obj_perms_manage.html:22
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\admin\guardian\model\obj_perms_manage_group.html:25
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\admin\guardian\model\obj_perms_manage_user.html:26
+msgid "Object permissions"
+msgstr "أذونات الكائن"
+
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\admin\guardian\model\obj_perms_manage.html:10
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\admin\guardian\model\obj_perms_manage_group.html:13
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\admin\guardian\model\obj_perms_manage_user.html:14
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\export.html:17
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import.html:28
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_form.html:11
+#: .\env\Lib\site-packages\unfold\templates\admin\app_index.html:15
+#: .\env\Lib\site-packages\unfold\templates\admin\auth\user\change_password.html:13
+#: .\env\Lib\site-packages\unfold\templates\admin\base.html:23
+#: .\env\Lib\site-packages\unfold\templates\admin\change_form.html:18
+#: .\env\Lib\site-packages\unfold\templates\admin\change_list.html:31
+#: .\env\Lib\site-packages\unfold\templates\admin\delete_confirmation.html:17
+#: .\env\Lib\site-packages\unfold\templates\admin\delete_selected_confirmation.html:17
+#: .\env\Lib\site-packages\unfold\templates\admin\object_history.html:9
+#: .\env\Lib\site-packages\unfold\templates\registration\password_change_done.html:12
+#: .\env\Lib\site-packages\unfold\templates\registration\password_change_form.html:12
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\site_icon.html:7
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\site_icon.html:9
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\site_icon.html:11
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\site_logo.html:5
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\site_logo.html:7
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\site_logo.html:9
+#: .\home\apps.py:7 .\templates\admin\index.html:10
+#: .\templates\components\header.html:172 .\templates\wishlist.html:21
+msgid "Home"
+msgstr "الرئيسية"
+
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\admin\guardian\model\obj_perms_manage_group.html:39
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\admin\guardian\model\obj_perms_manage_user.html:40
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_list.html:10
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_list.html:44
+msgid "Object"
+msgstr "هدف"
+
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\admin\guardian\model\obj_perms_manage_group.html:42
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\unfold\guardian\group_form.html:15
+msgid "Group"
+msgstr "مجموعة"
+
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\admin\guardian\model\obj_perms_manage_group.html:49
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\admin\guardian\model\obj_perms_manage_user.html:50
+#: .\env\Lib\site-packages\unfold\templates\admin\pagination.html:38
+#: .\env\Lib\site-packages\unfold\templates\admin\submit_line.html:10
+msgid "Save"
+msgstr "يحفظ"
+
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\unfold\guardian\group_form.html:7
+msgid "Group permissions"
+msgstr "أذونات المجموعة"
+
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\unfold\guardian\group_form.html:25
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\unfold\guardian\group_form.html:49
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\unfold\guardian\user_form.html:25
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\unfold\guardian\user_form.html:49
+#: .\env\Lib\site-packages\unfold\templates\admin\object_history.html:42
+#: .\env\Lib\site-packages\unfold\templates\admin\object_history.html:58
+msgid "Action"
+msgstr "فعل"
+
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\unfold\guardian\group_form.html:51
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\unfold\guardian\user_form.html:51
+msgid "Edit"
+msgstr "يحرر"
+
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\unfold\guardian\group_form.html:67
+msgid "Manage group"
+msgstr "إدارة المجموعة"
+
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\unfold\guardian\user_form.html:7
+msgid "User permissions"
+msgstr "أذونات المستخدم"
+
+#: .\env\Lib\site-packages\unfold\contrib\guardian\templates\unfold\guardian\user_form.html:67
+msgid "Manage user"
+msgstr "إدارة المستخدم"
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\change_form.html:8
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\change_list_export_item.html:4
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\export.html:28
+msgid "Export"
+msgstr "يصدّر"
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\change_list_import_item.html:4
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import.html:39
+msgid "Import"
+msgstr "يستورد"
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\export.html:41
+#, python-format
+msgid ""
+"\n"
+"                    Export %(len)s selected item.\n"
+"                "
+msgid_plural ""
+"\n"
+"                    Export %(len)s selected items.\n"
+"                "
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\export.html:60
+msgid "This exporter will export the following fields"
+msgstr "سيقوم هذا المصدر بتصدير الحقول التالية"
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\export.html:79
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import_form.html:21
+#: .\templates\Login.html:45
+msgid "Submit"
+msgstr "يُقدِّم"
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import_confirm.html:10
+msgid ""
+"Below is a preview of data to be imported. If you are satisfied with the "
+"results, click 'Confirm import'"
+msgstr ""
+"فيما يلي معاينة للبيانات المراد استيرادها.إذا كنت راضيًا عن النتائج ، فانقر "
+"فوق \"تأكيد الاستيراد\""
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import_confirm.html:15
+msgid "Confirm import"
+msgstr "تأكيد الاستيراد"
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import_errors.html:19
+msgid "Line number"
+msgstr "رقم السطر"
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import_preview.html:22
+msgid "New"
+msgstr "جديد"
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import_preview.html:24
+msgid "Skipped"
+msgstr "تخطي"
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import_preview.html:28
+msgid "Update"
+msgstr "تحديث"
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import_validation.html:6
+msgid "Some rows failed to validate"
+msgstr "فشلت بعض الصفوف في التحقق من صحة"
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import_validation.html:10
+msgid ""
+"Please correct these errors in your data where possible, then reupload it "
+"using the form above."
+msgstr ""
+"يرجى تصحيح هذه الأخطاء في بياناتك حيثما أمكن ، ثم إعادة تحميلها باستخدام "
+"النموذج أعلاه."
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import_validation.html:22
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import_validation.html:40
+msgid "Row"
+msgstr "صف"
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import_validation.html:26
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import_validation.html:44
+msgid "Errors"
+msgstr "الأخطاء"
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\import_validation.html:70
+msgid "Non field specific"
+msgstr "غير حقل محدد"
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\resource_fields_list.html:6
+msgid "This exporter will export the following fields: "
+msgstr "سيقوم هذا المصدر بتصدير الحقول التالية:"
+
+#: .\env\Lib\site-packages\unfold\contrib\import_export\templates\admin\import_export\resource_fields_list.html:8
+msgid "This importer will import the following fields: "
+msgstr "سيقوم هذا المستورد باستيراد الحقول التالية:"
+
+#. Translators: Model verbose name and instance representation,
+#. suitable to be an item in a list.
+#: .\env\Lib\site-packages\unfold\contrib\inlines\admin.py:94
+#, python-format
+msgid "%(class_name)s %(instance)s"
+msgstr "%(class_name)s %(instance)s"
+
+#: .\env\Lib\site-packages\unfold\contrib\inlines\admin.py:106
+#, python-format
+msgid ""
+"Deleting %(class_name)s %(instance)s would require deleting the following "
+"protected related objects: %(related_objects)s"
+msgstr ""
+"يتطلب حذف ٪ (class_name) s ٪ (مثيل) s حذف الكائنات ذات الصلة المحمية "
+"التالية: ٪ (relation_objects) s"
+
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history.html:8
+msgid ""
+"Choose a date from the list below to revert to a previous version of this "
+"object."
+msgstr "اختر تاريخًا من القائمة أدناه للعودة إلى إصدار سابق من هذا الكائن."
+
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history.html:28
+#: .\env\Lib\site-packages\unfold\templates\admin\object_history.html:81
+msgid "entry"
+msgid_plural "entries"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history.html:32
+msgid "This object doesn't have a change history."
+msgstr "هذا الكائن ليس لديه تاريخ تغيير."
+
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_form.html:22
+#: .\env\Lib\site-packages\unfold\templates\admin\change_form_object_tools.html:6
+#: .\env\Lib\site-packages\unfold\templates\admin\object_history.html:21
+msgid "History"
+msgstr "تاريخ"
+
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_form.html:26
+#: .\env\Lib\site-packages\unfold\templates\admin\edit_inline\stacked.html:59
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\app_list_default.html:38
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\edit_inline\tabular_title.html:25
+msgid "View"
+msgstr "منظر"
+
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_form.html:29
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\submit_line.html:9
+msgid "Revert"
+msgstr "يرجع"
+
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_form.html:48
+msgid ""
+"Press the 'Revert' button below to revert to this version of the object."
+msgstr "اضغط على زر \"العودة\" أدناه للعودة إلى هذا الإصدار من الكائن."
+
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_form.html:52
+msgid "Press the 'Change History' button below to edit the history."
+msgstr "اضغط على زر \"تغيير السجل\" أدناه لتحرير التاريخ."
+
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_list.html:20
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_list.html:56
+#: .\env\Lib\site-packages\unfold\templates\admin\object_history.html:34
+#: .\env\Lib\site-packages\unfold\templates\admin\object_history.html:50
+msgid "Date/time"
+msgstr "التاريخ/الوقت"
+
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_list.html:24
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_list.html:60
+msgid "Comment"
+msgstr "تعليق"
+
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_list.html:28
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_list.html:64
+msgid "Changed by"
+msgstr "تغيرت بواسطة"
+
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_list.html:32
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_list.html:78
+msgid "Change reason"
+msgstr "تغيير العقل"
+
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_list.html:36
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\object_history_list.html:82
+msgid "Changes"
+msgstr "التغييرات"
+
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\submit_line.html:15
+msgid "Change History"
+msgstr "تغيير التاريخ"
+
+#: .\env\Lib\site-packages\unfold\contrib\simple_history\templates\simple_history\submit_line.html:20
+#: .\env\Lib\site-packages\unfold\templates\admin\submit_line.html:53
+msgid "Close"
+msgstr "يغلق"
+
+#: .\env\Lib\site-packages\unfold\forms.py:57
+msgid "Select action to run"
+msgstr "حدد إجراء لتشغيل"
+
+#: .\env\Lib\site-packages\unfold\forms.py:115
+msgid ""
+"Raw passwords are not stored, so there is no way to see this user’s "
+"password, but you can change the password using <a href=\"{}\" class=\"text-"
+"primary-600 dark:text-primary-500\">this form</a>."
+msgstr ""
+
+#: .\env\Lib\site-packages\unfold\mixins\base_model_admin.py:43
+#: .\env\Lib\site-packages\unfold\mixins\base_model_admin.py:64
+msgid "Select value"
+msgstr "حدد القيمة"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\actions.html:22
+msgid "Run the selected action"
+msgstr "قم بتشغيل الإجراء المحدد"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\actions.html:23
+msgid "Run"
+msgstr "يجري"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\actions.html:43
+msgid "Click here to select the objects across all pages"
+msgstr "انقر هنا لتحديد الكائنات عبر جميع الصفحات"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\actions.html:44
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr "حدد All ٪ (Total_Count) S ٪ (module_name) s"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\actions.html:50
+msgid "Clear selection"
+msgstr "اختيار واضح"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\app_index.html:5
+#: .\env\Lib\site-packages\unfold\templates\admin\base_site.html:3
+#: .\env\Lib\site-packages\unfold\templates\admin\index.html:7
+#: .\env\Lib\site-packages\unfold\templates\admin\login.html:32
+#: .\env\Lib\site-packages\unfold\templates\unfold\layouts\base.html:7
+msgid "Django site admin"
+msgstr "Django موقع المسؤول"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\app_list.html:12
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\app_list_default.html:9
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr "النماذج في تطبيق ٪ (الاسم) S"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\app_list.html:47
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\app_list.html:98
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\app_list_default.html:59
+msgid "You don’t have permission to view or edit anything."
+msgstr ""
+
+#: .\env\Lib\site-packages\unfold\templates\admin\auth\user\add_form.html:7
+msgid ""
+"First, enter a username and password. Then, you’ll be able to edit more user "
+"options."
+msgstr ""
+
+#: .\env\Lib\site-packages\unfold\templates\admin\auth\user\add_form.html:9
+msgid "Enter a username and password."
+msgstr "أدخل اسم المستخدم وكلمة المرور."
+
+#: .\env\Lib\site-packages\unfold\templates\admin\auth\user\change_password.html:25
+#: .\env\Lib\site-packages\unfold\templates\admin\auth\user\change_password.html:55
+#: .\env\Lib\site-packages\unfold\templates\registration\password_change_done.html:15
+#: .\env\Lib\site-packages\unfold\templates\registration\password_change_form.html:15
+#: .\env\Lib\site-packages\unfold\templates\registration\password_change_form.html:46
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\account_links.html:23
+msgid "Change password"
+msgstr "تغيير كلمة المرور"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\auth\user\change_password.html:44
+#, python-format
+msgid "Enter a new password for the user <strong>%(username)s</strong>."
+msgstr "أدخل كلمة مرور جديدة للمستخدم <strong> ٪ (اسم المستخدم) S </strong>."
+
+#: .\env\Lib\site-packages\unfold\templates\admin\change_form.html:32
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\add_link.html:5
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\add_link.html:8
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\empty_results.html:4
+#, python-format
+msgid "Add %(name)s"
+msgstr "إضافة ٪ (الاسم) ق"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\change_form_object_tools.html:12
+#: .\env\Lib\site-packages\unfold\templates\admin\edit_inline\stacked.html:71
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\edit_inline\tabular_title.html:33
+msgid "View on site"
+msgstr "عرض في الموقع"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\change_list.html:85
+msgid "Filters"
+msgstr "المرشحات"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\change_list_results.html:32
+msgid "Select all rows"
+msgstr "حدد جميع الصفوف"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\change_list_results.html:46
+msgid "Toggle sorting"
+msgstr "تبديل الفرز"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\change_list_results.html:54
+msgid "Remove from sorting"
+msgstr "ترفع من الفرز"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\change_list_results.html:60
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr "الفرز الأولوية: ٪ (priority_number) ق"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\change_list_results.html:85
+msgid "Expand row"
+msgstr "توسيع الصف"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\delete_confirmation.html:37
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would result in deleting "
+"related objects, but your account doesn't have permission to delete the "
+"following types of objects:"
+msgstr ""
+"سيؤدي حذف ٪ (Object_name) S '٪ (Ensaped_Object) s إلى حذف الكائنات ذات "
+"الصلة ، لكن حسابك لا يحتوي على إذن لحذف الأنواع التالية من الكائنات:"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\delete_confirmation.html:53
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the "
+"following protected related objects:"
+msgstr ""
+"يتطلب حذف ٪ (Object_name) s '٪ (Ensaped_Object) s' حذف الكائنات ذات الصلة "
+"المحمية التالية:"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\delete_confirmation.html:69
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? "
+"All of the following related items will be deleted:"
+msgstr ""
+"هل أنت متأكد من أنك تريد حذف ٪ (Object_name) S \"٪ (Encaped_Object) S\"؟سيتم "
+"حذف جميع العناصر ذات الصلة التالية:"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\delete_confirmation.html:76
+#: .\env\Lib\site-packages\unfold\templates\admin\delete_selected_confirmation.html:71
+msgid "Objects"
+msgstr "أشياء"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\delete_selected_confirmation.html:27
+msgid "Delete multiple objects"
+msgstr "حذف كائنات متعددة"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\delete_selected_confirmation.html:37
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would result in deleting related "
+"objects, but your account doesn't have permission to delete the following "
+"types of objects:"
+msgstr ""
+"سيؤدي حذف النسبة المئوية المحددة (objects_name) إلى حذف الكائنات ذات الصلة ، "
+"لكن حسابك ليس لديه إذن لحذف الأنواع التالية من الكائنات:"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\delete_selected_confirmation.html:50
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would require deleting the following "
+"protected related objects:"
+msgstr ""
+"سيتطلب حذف ٪ SENED (Objects_name) s حذف الكائنات ذات الصلة المحمية التالية:"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\delete_selected_confirmation.html:64
+#, python-format
+msgid ""
+"Are you sure you want to delete the selected %(objects_name)s? All of the "
+"following objects and their related items will be deleted:"
+msgstr ""
+"هل أنت متأكد من أنك تريد حذف ٪ (Objects_name) S؟سيتم حذف جميع الكائنات "
+"التالية وعناصرها ذات الصلة:"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\filter.html:5
+#, python-format
+msgid " By %(filter_title)s "
+msgstr "بنسبة ٪ (filter_title) ق"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\includes\object_delete_summary.html:5
+msgid "Summary"
+msgstr "ملخص"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\login.html:31
+msgid "Welcome back to"
+msgstr "مرحبًا بك في"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\login.html:44
+#, python-format
+msgid ""
+"You are authenticated as %(username)s, but are not authorized to access this "
+"page. Would you like to login to a different account?"
+msgstr ""
+"تم مصادقةك على أنها ٪ (اسم المستخدم) ، ولكن لا يُسمح لك بالوصول إلى هذه "
+"الصفحة.هل ترغب في تسجيل الدخول إلى حساب مختلف؟"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\login.html:67
+msgid "Log in"
+msgstr "تسجيل الدخول"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\login.html:76
+msgid "Forgotten your password or username?"
+msgstr "نسيت كلمة المرور أو اسم المستخدم الخاص بك؟"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\login.html:88
+msgid "Return to site"
+msgstr "العودة إلى الموقع"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\object_history.html:84
+#, fuzzy
+#| msgid "This object doesn't have a change history."
+msgid ""
+"This object doesn’t have a change history. It probably wasn’t added via this "
+"admin site."
+msgstr "هذا الكائن ليس لديه تاريخ تغيير."
+
+#: .\env\Lib\site-packages\unfold\templates\admin\pagination.html:31
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\welcomemsg.html:28
+msgid "Show all"
+msgstr "أظهر كل شيء"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\search_form.html:7
+msgid "Type to search"
+msgstr "اكتب للبحث"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\submit_line.html:29
+msgid "Save and continue editing"
+msgstr "حفظ ومواصلة التحرير"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\submit_line.html:31
+msgid "Save and view"
+msgstr "حفظ وعرض"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\submit_line.html:38
+msgid "Save and add another"
+msgstr "احفظ وأضف آخر"
+
+#: .\env\Lib\site-packages\unfold\templates\admin\submit_line.html:44
+msgid "Save as new"
+msgstr "حفظ كما الجديد"
+
+#: .\env\Lib\site-packages\unfold\templates\registration\logged_out.html:11
+msgid "You have been successfully logged out from the administration"
+msgstr "لقد تم تسجيل تسجيل الدخول بنجاح من الإدارة"
+
+#: .\env\Lib\site-packages\unfold\templates\registration\logged_out.html:16
+msgid "Thanks for spending some quality time with the web site today."
+msgstr "شكرا لقضاء بعض الوقت الجيد مع موقع الويب اليوم."
+
+#: .\env\Lib\site-packages\unfold\templates\registration\logged_out.html:20
+msgid "Log in again"
+msgstr "تسجيل الدخول مرة أخرى"
+
+#: .\env\Lib\site-packages\unfold\templates\registration\password_change_done.html:26
+msgid "Your password was changed."
+msgstr "تم تغيير كلمة المرور الخاصة بك."
+
+#: .\env\Lib\site-packages\unfold\templates\registration\password_change_form.html:35
+msgid ""
+"Please enter your old password, for security’s sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\components\table.html:43
+msgid "No data"
+msgstr "لا توجد بيانات"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\account_links.html:17
+msgid "View site"
+msgstr "عرض الموقع"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\account_links.html:32
+msgid "Log out"
+msgstr "تسجيل الخروج"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\actions_row.html:4
+msgid "More actions"
+msgstr "المزيد من الإجراءات"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\app_list.html:68
+msgid "All applications"
+msgstr "جميع التطبيقات"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\app_list_default.html:31
+msgid "Add"
+msgstr "يضيف"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\boolean.html:10
+msgid "True"
+msgstr "نعم"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\boolean.html:12
+msgid "False"
+msgstr "لا"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\change_list_filter_actions.html:6
+msgid "Apply Filters"
+msgstr "تطبيق المرشحات"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\change_list_filter_actions.html:15
+msgid "Hide counts"
+msgstr "إخفاء التهم"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\change_list_filter_actions.html:19
+msgid "Show counts"
+msgstr "إظهار التهم"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\change_list_filter_actions.html:26
+msgid "Clear all filters"
+msgstr "مسح جميع المرشحات"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\delete_submit_line.html:5
+msgid "No, take me back"
+msgstr "لا ، أعدني"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\delete_submit_line.html:9
+msgid "Yes, I’m sure"
+msgstr ""
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\display_header.html:10
+msgid "Record picture"
+msgstr "صورة تسجيل"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\edit_inline\tabular_delete.html:4
+msgid "Remove"
+msgstr "يزيل"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\edit_inline\tabular_heading.html:21
+msgid "Delete?"
+msgstr "يمسح؟"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\empty_results.html:12
+msgid "No results found"
+msgstr "لم يتم العثور على نتائج"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\empty_results.html:16
+msgid ""
+"This page yielded into no results. Create a new item or reset your filters."
+msgstr ""
+"هذه الصفحة أسفرت عن عدم وجود نتائج.قم بإنشاء عنصر جديد أو أعد ضبط المرشحات "
+"الخاصة بك."
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\empty_results.html:30
+msgid "Reset filters"
+msgstr "إعادة تعيين مرشحات"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\header_back_button.html:7
+msgid "Go back"
+msgstr "عُد"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\history.html:9
+msgid "Recent actions"
+msgstr "الإجراءات الأخيرة"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\history.html:28
+msgid "Unknown content"
+msgstr "محتوى غير معروف"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\messages\errornote.html:6
+msgid "Please correct the error below."
+msgstr "الرجاء تصحيح الخطأ أدناه."
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\messages\errornote.html:8
+msgid "Please correct the errors below."
+msgstr "الرجاء تصحيح الأخطاء أدناه."
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\search.html:18
+msgid "Search apps and models..."
+msgstr "البحث عن تطبيقات ونماذج ..."
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\search.html:18
+msgid "Filter navigation items"
+msgstr "تصفية عناصر التنقل"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\site_branding.html:3
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\site_branding.html:6
+msgid "Django administration"
+msgstr "إدارة Django"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\tab_items.html:27
+msgid "General"
+msgstr "عام"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\theme_switch.html:15
+msgid "Dark"
+msgstr "مظلم"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\theme_switch.html:22
+msgid "Light"
+msgstr "ضوء"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\theme_switch.html:29
+msgid "System"
+msgstr "نظام"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\welcomemsg.html:28
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\welcomemsg.html:28
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr "٪ (full_result_count) إجمالي"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\helpers\welcomemsg.html:36
+msgid "Welcome,"
+msgstr "مرحباً،"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\widgets\clearable_file_input.html:6
+msgid "Image preview"
+msgstr "معاينة الصورة"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\widgets\clearable_file_input.html:24
+#: .\env\Lib\site-packages\unfold\templates\unfold\widgets\clearable_file_input_small.html:17
+msgid "Choose file to upload"
+msgstr "اختر ملفًا للتحميل"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\widgets\related_widget_wrapper.html:16
+#, python-format
+msgid "Change selected %(model)s"
+msgstr "تغيير ٪ محدد (نموذج) ق"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\widgets\related_widget_wrapper.html:26
+#, python-format
+msgid "Add another %(model)s"
+msgstr "إضافة ٪ أخرى (نموذج) ق"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\widgets\related_widget_wrapper.html:35
+#, python-format
+msgid "View selected %(model)s"
+msgstr "عرض محدد ٪ (نموذج) ق"
+
+#: .\env\Lib\site-packages\unfold\templates\unfold\widgets\related_widget_wrapper.html:45
+#, python-format
+msgid "Delete selected %(model)s"
+msgstr "حذف ٪ محدد (نموذج) ق"
+
+#: .\env\Lib\site-packages\unfold\templatetags\unfold_list.py:115
+msgid "Select all objects on this page for an action"
+msgstr "حدد جميع الكائنات في هذه الصفحة للحصول على إجراء"
+
+#: .\env\Lib\site-packages\unfold\widgets.py:498
+#: .\env\Lib\site-packages\unfold\widgets.py:532
+msgid "Date"
+msgstr "تاريخ"
+
+#: .\env\Lib\site-packages\unfold\widgets.py:655
+msgid "Select currency"
+msgstr "حدد العملة"
+
+#: .\home\models.py:10 .\product\models.py:12 .\product\models.py:25
+#: .\product\models.py:101
+msgid "Name"
+msgstr "الاسم"
+
+#: .\home\models.py:11
+msgid "Name Arabic"
+msgstr "اسم اللغة العربية"
+
+#: .\home\models.py:13
+msgid "Job Title"
+msgstr "مسمى وظيفي"
+
+#: .\home\models.py:14
+msgid "Job Title Arabic"
+msgstr "المسمى الوظيفي العربي"
+
+#: .\home\models.py:15 .\home\models.py:29 .\home\models.py:41
+#: .\home\models.py:55 .\home\models.py:68 .\product\models.py:53
+#: .\templates\shop-details-1.html:144
+msgid "Description"
+msgstr "وصف"
+
+#: .\home\models.py:16 .\home\models.py:30 .\home\models.py:42
+#: .\home\models.py:56 .\home\models.py:69
+msgid "Description Arabic"
+msgstr "الوصف العربي"
+
+#: .\home\models.py:24 .\home\models.py:25
+msgid "About"
+msgstr "معلومات عنا"
+
+#: .\home\models.py:37 .\home\models.py:38
+msgid "Vission"
+msgstr "رؤية"
+
+#: .\home\models.py:50 .\home\models.py:51 .\templates\index.html:562
+msgid "Mission"
+msgstr "مهمة"
+
+#: .\home\models.py:64 .\home\models.py:65
+msgid "Terms and condition"
+msgstr "الشروط والأحكام"
+
+#: .\home\models.py:77 .\home\models.py:78
+msgid "Refund and policy"
+msgstr "استرداد والسياسة"
+
+#: .\home\views.py:82
+msgid "Please fill all fields"
+msgstr "يرجى ملء جميع الحقول"
+
+#: .\home\views.py:102
+msgid "Your request has been sent successfully"
+msgstr "تم إرسال طلبك بنجاح"
+
+#: .\product\apps.py:7 .\product\models.py:97
+msgid "Products"
+msgstr "المنتجات"
+
+#: .\product\models.py:13 .\product\models.py:48
+msgid "Suplier"
+msgstr "المورد"
+
+#: .\product\models.py:20 .\product\models.py:56 .\templates\index.html:238
+#: .\templates\shop-details-1.html:104 .\templates\shop-details-1.html:666
+msgid "Category"
+msgstr "فئة"
+
+#: .\product\models.py:21 .\templates\shop.html:39
+msgid "Categories"
+msgstr "فئات"
+
+#: .\product\models.py:31
+msgid "Tag"
+msgstr "علامه"
+
+#: .\product\models.py:32 .\product\models.py:57
+#: .\templates\shop-details-1.html:107
+msgid "Tags"
+msgstr "العلامات"
+
+#: .\product\models.py:44 .\product\models.py:51
+msgid "Images"
+msgstr "الصور"
+
+#: .\product\models.py:49
+msgid "Title"
+msgstr "عنوان"
+
+#: .\product\models.py:50
+msgid "Main Image"
+msgstr "صورة"
+
+#: .\product\models.py:52
+msgid "Price"
+msgstr "سعر"
+
+#: .\product\models.py:54 .\product\models.py:142
+msgid "Discount"
+msgstr "الخصم"
+
+#: .\product\models.py:55
+msgid "Label"
+msgstr "ملصق"
+
+#: .\product\models.py:60 .\product\models.py:104
+msgid "Rate"
+msgstr "معدل"
+
+#: .\product\models.py:61 .\templates\shop-details-1.html:101
+msgid "SKU"
+msgstr "SKU"
+
+#: .\product\models.py:62
+msgid "Slug"
+msgstr "سبيكة"
+
+#: .\product\models.py:96 .\product\models.py:105 .\product\models.py:128
+#: .\product\models.py:157 .\product\models.py:217
+msgid "Product"
+msgstr "المنتج"
+
+#: .\product\models.py:103 .\product\models.py:121
+msgid "Review"
+msgstr "المراجعه"
+
+#: .\product\models.py:122 .\templates\index.html:208
+#: .\templates\shop-details-1.html:66 .\templates\shop-details-1.html:148
+#: .\templates\shop-details-1.html:636
+msgid "Reviews"
+msgstr "المراجعات"
+
+#: .\product\models.py:135 .\templates\wishlist.html:16
+#: .\templates\wishlist.html:26
+msgid "Wishlist"
+msgstr "المفضلة"
+
+#: .\product\models.py:136
+msgid "Wishlists"
+msgstr "المفضلة"
+
+#: .\product\models.py:143
+msgid "Valid From"
+msgstr "صالح من"
+
+#: .\product\models.py:144
+msgid "Valid To"
+msgstr "صالح ل"
+
+#: .\product\models.py:145
+msgid "Active"
+msgstr "فعال"
+
+#: .\product\models.py:151 .\product\models.py:161
+msgid "Coupon"
+msgstr "قسيمة"
+
+#: .\product\models.py:152
+msgid "Coupons"
+msgstr "كوبونات"
+
+#: .\product\models.py:158 .\product\models.py:218 .\templates\cart.html:35
+#: .\templates\index.html:213 .\templates\shop-details-1.html:73
+#: .\templates\shop-details-1.html:641
+msgid "Quantity"
+msgstr "كمية"
+
+#: .\product\models.py:162 .\product\models.py:196 .\product\models.py:228
+msgid "Total Price"
+msgstr "اجمالي السعر"
+
+#: .\product\models.py:163 .\product\models.py:229
+msgid "Total Price After Discount"
+msgstr "إجمالي السعر بعد الخصم"
+
+#: .\product\models.py:182
+msgid "Card"
+msgstr "بطاقة"
+
+#: .\product\models.py:183
+msgid "Cards"
+msgstr "عربات التسوق"
+
+#: .\product\models.py:189
+msgid "Pending"
+msgstr "قيد الإنتظار"
+
+#: .\product\models.py:190
+msgid "Paid"
+msgstr "مدفوع"
+
+#: .\product\models.py:191
+msgid "Failed"
+msgstr "فشل"
+
+#: .\product\models.py:192
+msgid "Cancelled"
+msgstr "ألغى"
+
+#: .\product\models.py:200
+msgid "Transaction ID"
+msgstr "معرف المعاملة"
+
+#: .\product\models.py:212
+msgid "Orders"
+msgstr "طلبات"
+
+#: .\product\models.py:222
+msgid "Address"
+msgstr "العنوان"
+
+#: .\product\models.py:224
+msgid "City"
+msgstr "مدينة"
+
+#: .\product\models.py:225
+msgid "Country"
+msgstr "دولة"
+
+#: .\product\models.py:226
+msgid "Zip Code"
+msgstr "الرمز البريدي"
+
+#: .\product\models.py:227
+msgid "Notes"
+msgstr "ملحوظات"
+
+#: .\product\models.py:252
+msgid "Order Item"
+msgstr "منتجات الطلب"
+
+#: .\product\models.py:253
+msgid "Order Items"
+msgstr "منتجات الطلب"
+
+#: .\product\views.py:161
+msgid "Product added to cart"
+msgstr "تم إضافة المنتج إلى العربة"
+
+#: .\product\views.py:176
+msgid "Product added to card"
+msgstr "تم إضافة المنتج إلى العربة"
+
+#: .\product\views.py:184 .\product\views.py:191
+msgid "Product added to wishlist"
+msgstr "تمت إضافة المنتج إلى قائمة الرغبات"
+
+#: .\product\views.py:210
+msgid "Product removed from card"
+msgstr "تم إزالة المنتج من العربة"
+
+#: .\product\views.py:219
+msgid "Product removed from wishlist"
+msgstr "تم إزالة المنتج من قائمة الأمنيات"
+
+#: .\product\views.py:396
+msgid "Invalid payment session"
+msgstr ""
+
+#: .\product\views.py:422
+msgid "Payment successful! Thank you for your purchase."
+msgstr ""
+
+#: .\product\views.py:425 .\product\views.py:429
+msgid "Payment verification failed"
+msgstr ""
+
+#: .\project\admin.py:13
+msgid "Dashboard"
+msgstr ""
+
+#: .\templates\Login.html:9 .\templates\components\header.html:199
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: .\templates\Login.html:9
+msgid "Signup"
+msgstr "اشتراك"
+
+#: .\templates\Login.html:24 .\templates\Login.html:31
+msgid "Log In"
+msgstr "تسجيل الدخول"
+
+#: .\templates\Login.html:24 .\templates\Login.html:58
+#: .\templates\Login.html:83 .\templates\singUp.html:101
+msgid "Sign Up"
+msgstr "اشتراك"
+
+#: .\templates\Login.html:36 .\templates\Login.html:70
+#: .\templates\shop-details-1.html:200 .\templates\singUp.html:75
+msgid "Your Email"
+msgstr "بريدك الإلكتروني"
+
+#: .\templates\Login.html:37 .\templates\Login.html:71
+msgid "alternate_email"
+msgstr "levelate_email"
+
+#: .\templates\Login.html:41 .\templates\Login.html:75
+#: .\templates\singUp.html:95
+msgid "Your Password"
+msgstr "كلمة المرور الخاصة بك"
+
+#: .\templates\Login.html:42 .\templates\Login.html:76
+#: .\templates\Login.html:80
+msgid "lock"
+msgstr "قفل"
+
+#: .\templates\Login.html:47
+msgid "Forgot your password?"
+msgstr "نسيت كلمة السر؟"
+
+#: .\templates\Login.html:60 .\templates\singUp.html:68
+msgid "Your Name"
+msgstr "اسمك"
+
+#: .\templates\Login.html:61 .\templates\Login.html:66
+msgid "perm_identity"
+msgstr "perm_identity"
+
+#: .\templates\Login.html:79 .\templates\singUp.html:98
+msgid "Confirm Password"
+msgstr "تأكيد كلمة المرور"
+
+#: .\templates\TearmsCondition.html:68 .\templates\index.html:65
+#: .\templates\refund.html:68
+msgid "Physicaltherapy Software Solutions"
+msgstr "حلول برامج العلاج الطبيعي"
+
+#: .\templates\TearmsCondition.html:71 .\templates\index.html:68
+#: .\templates\refund.html:71
+msgid "All Physical Therapist Needs is Our Mission From PT to PT"
+msgstr "جميع احتياجات المعالج الفيزيائي هي مهمتنا من PT إلى PT"
+
+#: .\templates\TearmsCondition.html:81
+msgid "Terms & Conditions"
+msgstr "الشروط والأحكام"
+
+#: .\templates\admin\index.html:30
+msgid "Total Products"
+msgstr "اجمالي المنتجات"
+
+#: .\templates\admin\index.html:31 .\templates\admin\index.html:46
+#: .\templates\admin\index.html:61 .\templates\admin\index.html:79
+#: .\templates\admin\index.html:94
+msgid "Loading..."
+msgstr ""
+
+#: .\templates\admin\index.html:45
+msgid "Total Orders"
+msgstr "اجمالي الطلبات"
+
+#: .\templates\admin\index.html:60
+msgid "Total Suppliers"
+msgstr "انضم الموردين"
+
+#: .\templates\admin\index.html:78
+msgid "Total Revenue"
+msgstr "اجمالي الدخل"
+
+#: .\templates\admin\index.html:93
+msgid "Pending Orders"
+msgstr "قيد الإنتظار"
+
+#: .\templates\admin\index.html:104
+msgid "Products Overview"
+msgstr "معاينة المنتجات"
+
+#: .\templates\admin\index.html:110
+msgid "Orders Overview"
+msgstr "معاينة الطلبات"
+
+#: .\templates\admin\index.html:116
+msgid "Suppliers Overview"
+msgstr "معاينة الموردين "
+
+#: .\templates\base.html:10 .\templates\components\footer.html:36
+msgid "Phyzioline"
+msgstr "فيزيولين"
+
+#: .\templates\cart.html:17
+msgid "CART"
+msgstr "عربة"
+
+#: .\templates\cart.html:33 .\templates\wishlist.html:43
+msgid "Product Name"
+msgstr "اسم المنتج"
+
+#: .\templates\cart.html:34 .\templates\cart.html:119
+#: .\templates\wishlist.html:44
+msgid "Total"
+msgstr "المجموع"
+
+#: .\templates\cart.html:36 .\templates\cart.html:114
+msgid "Subtotal"
+msgstr "نطاق فرعي"
+
+#: .\templates\cart.html:60 .\templates\cart.html:72 .\templates\cart.html:114
+#: .\templates\cart.html:120 .\templates\index.html:151
+#: .\templates\index.html:210 .\templates\shop-details-1.html:68
+#: .\templates\shop.html:138 .\templates\shop.html:245
+#: .\templates\shop.html:371 .\templates\wishlist.html:70
+msgid "EG"
+msgstr "جم"
+
+#: .\templates\cart.html:96
+msgid "Continue Shopping"
+msgstr "مواصلة التسوق"
+
+#: .\templates\cart.html:99
+msgid "Update Cart"
+msgstr "تحديث العربة"
+
+#: .\templates\cart.html:110
+msgid "Total Cost"
+msgstr "التكلفة الإجمالية"
+
+#: .\templates\cart.html:124
+msgid "Proceed to Checkout"
+msgstr "الدفع الان"
+
+#: .\templates\components\footer.html:14
+msgid ""
+"Medicia is an online medical service and medicinewooCommerce theme for your "
+"ultimate online store and medical service"
+msgstr ""
+"Medicia هي خدمة طبية عبر الإنترنت وموضوع WooCommerce لمتجرك في نهاية المطاف "
+"على الإنترنت والخدمة الطبية"
+
+#: .\templates\components\footer.html:19
+msgid "cairo, 120 fasial"
+msgstr "القاهرة ، 120 فيصل"
+
+#: .\templates\components\footer.html:39 .\templates\components\header.html:41
+#: .\templates\components\header.html:175 .\templates\wishlist.html:24
+msgid "Shop"
+msgstr "متجر"
+
+#: .\templates\components\footer.html:42 .\templates\components\header.html:44
+#: .\templates\components\header.html:178
+msgid "Private Cases"
+msgstr "الحالات الخاصة"
+
+#: .\templates\components\footer.html:45 .\templates\components\header.html:47
+#: .\templates\components\header.html:181
+msgid "Our System"
+msgstr "نظامنا"
+
+#: .\templates\components\footer.html:48 .\templates\components\header.html:50
+#: .\templates\components\header.html:184
+msgid "Jobs"
+msgstr "وظائف"
+
+#: .\templates\components\footer.html:51 .\templates\components\header.html:53
+#: .\templates\components\header.html:187
+msgid "Courses"
+msgstr "دورات"
+
+#: .\templates\components\footer.html:54 .\templates\components\header.html:56
+#: .\templates\components\header.html:190
+msgid "About Us"
+msgstr "معلومات عنا"
+
+#: .\templates\components\footer.html:62
+msgid "Quick Link"
+msgstr "رابط سريع"
+
+#: .\templates\components\footer.html:65
+msgid "Support"
+msgstr "يدعم"
+
+#: .\templates\components\footer.html:68
+msgid "Terms & Condition"
+msgstr "الشروط والأحكام"
+
+#: .\templates\components\footer.html:71 .\templates\refund.html:81
+msgid "Return Policy for Phyzioline "
+msgstr "سياسة إرجاع الفيزيولين"
+
+#: .\templates\components\footer.html:74
+msgid "Help Center"
+msgstr "مركز المساعدة"
+
+#: .\templates\components\footer.html:101
+msgid "Designed and developed by"
+msgstr "تم تصميمه وتطويره بواسطة"
+
+#: .\templates\components\header.html:101
+msgid "logout"
+msgstr "تسجيل الخروج"
+
+#: .\templates\components\header.html:108
+msgid "login"
+msgstr "تسجيل الدخول"
+
+#: .\templates\components\header.html:159
+msgid "Cart Item"
+msgstr "عنصر العربة"
+
+#: .\templates\components\header.html:168
+msgid "Menu List"
+msgstr "قائمة القائمة"
+
+#: .\templates\components\header.html:195
+msgid "Logout"
+msgstr "تسجيل الخروج"
+
+#: .\templates\index.html:83
+msgid "Join as a Supplier"
+msgstr "انضم كمورد"
+
+#: .\templates\index.html:86
+msgid "Join"
+msgstr "ينضم"
+
+#: .\templates\index.html:103
+msgid "Product By Category"
+msgstr "المنتج حسب الفئة"
+
+#: .\templates\index.html:114
+msgid "Other"
+msgstr "آخر"
+
+#: .\templates\index.html:171
+msgid "VIEW ALL"
+msgstr "عرض الكل"
+
+#: .\templates\index.html:211 .\templates\shop-details-1.html:639
+msgid ""
+"Best Electronic Digital Thermometer adipiscing elit, sed do eiusmod "
+"teincididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse us "
+"ultrices gravidaes. Risus commodo viverra maecenas accumsan lacus vel "
+"facilisis."
+msgstr ""
+"أفضل مقياس حرارة رقمي إلكتروني adipiscing olit ، sed do eiusmod teincididunt "
+"ut labore et dolore magna aliqua.quis ipsum suppendisse us ultrices "
+"gravidaes.ريسوس كومودو فيفيررا ميناس أكومسان لاكوس فيلس."
+
+#: .\templates\index.html:225 .\templates\shop-details-1.html:89
+#: .\templates\shop-details-1.html:653
+msgid "Add to Cart"
+msgstr "أضف إلى السلة"
+
+#: .\templates\index.html:239 .\templates\shop-details-1.html:666
+msgid "Medical Equipment"
+msgstr "المعدات الطبية"
+
+#: .\templates\index.html:242 .\templates\shop-details-1.html:118
+#: .\templates\shop-details-1.html:669
+msgid "Share"
+msgstr "يشارك"
+
+#: .\templates\index.html:275
+msgid "Find a Private Cases"
+msgstr "ابحث عن حالات خاصة"
+
+#: .\templates\index.html:279
+msgid ""
+"We offer specialized treatment for a variety of conditions. Our expert team "
+"is dedicated to providing the best therapies to improve your quality of life "
+"and restore your movement naturally. Get ready to return to activity with "
+"comfort and safety."
+msgstr ""
+"نحن نقدم علاجًا متخصصًا لمجموعة متنوعة من الحالات.فريق الخبراء لدينا مكرس "
+"لتوفير أفضل العلاجات لتحسين جودة حياتك واستعادة حركتك بشكل طبيعي.استعد "
+"للعودة إلى النشاط مع الراحة والسلامة."
+
+#: .\templates\index.html:287 .\templates\index.html:290
+#: .\templates\index.html:293 .\templates\index.html:296
+#: .\templates\index.html:299 .\templates\index.html:302
+#: .\templates\index.html:305 .\templates\index.html:308
+#: .\templates\index.html:311 .\templates\index.html:314
+#: .\templates\index.html:317 .\templates\index.html:320
+#: .\templates\index.html:331 .\templates\index.html:334
+#: .\templates\index.html:337 .\templates\index.html:340
+#: .\templates\index.html:343 .\templates\index.html:346
+#: .\templates\index.html:349 .\templates\index.html:352
+#: .\templates\index.html:355 .\templates\index.html:358
+#: .\templates\index.html:361 .\templates\index.html:364
+#: .\templates\index.html:410 .\templates\index.html:413
+#: .\templates\index.html:416 .\templates\index.html:419
+#: .\templates\index.html:422 .\templates\index.html:425
+#: .\templates\index.html:428 .\templates\index.html:431
+#: .\templates\index.html:434 .\templates\index.html:437
+#: .\templates\index.html:440 .\templates\index.html:443
+#: .\templates\index.html:454 .\templates\index.html:457
+#: .\templates\index.html:460 .\templates\index.html:463
+#: .\templates\index.html:466 .\templates\index.html:469
+#: .\templates\index.html:472 .\templates\index.html:475
+#: .\templates\index.html:478 .\templates\index.html:481
+#: .\templates\index.html:484 .\templates\index.html:487
+msgid "Coming Soon"
+msgstr "قريباً"
+
+#: .\templates\index.html:376
+msgid "CLINIC MANAGEMENT SYSTEMS"
+msgstr "أنظمة إدارة العيادة"
+
+#: .\templates\index.html:377 .\templates\index.html:398
+#: .\templates\index.html:504
+msgid "by Phyzioline"
+msgstr "بواسطة فيزيولين"
+
+#: .\templates\index.html:384
+msgid ""
+"Empowering Physical Therapy Through Innovation Where Healing Meets "
+"Technology, and Possibilities are Redefined"
+msgstr ""
+"تمكين العلاج الطبيعي من خلال الابتكار حيث يلتقي الشفاء بالتكنولوجيا ، وإعادة "
+"تعريف الاحتمالات"
+
+#: .\templates\index.html:387
+msgid "SOON THE OPENING"
+msgstr "قريبا الافتتاح"
+
+#: .\templates\index.html:397
+msgid "Physiotherapy JObS"
+msgstr "وظائف العلاج الطبيعي"
+
+#: .\templates\index.html:402
+msgid ""
+"Soon, job opportunities in the field of physiotherapy will be open! If "
+"you're interested, you'll have the chance to work with specialists to "
+"provide treatments that help improve patients' movement and physical "
+"functions. Stay tuned for more details coming soon!"
+msgstr ""
+"قريباً ، ستكون فرص العمل في مجال العلاج الطبيعي مفتوحة!إذا كنت مهتمًا ، فستتاح "
+"لك الفرصة للعمل مع المتخصصين لتوفير علاجات تساعد على تحسين حركة المرضى "
+"والوظائف البدنية.ترقبوا المزيد من التفاصيل قريبًا!"
+
+#: .\templates\index.html:503
+msgid "Physiotherapy courses"
+msgstr "دورات العلاج الطبيعي"
+
+#: .\templates\index.html:506
+msgid "Soon, we will be offering free and subsidized Physiotherapy courses!"
+msgstr "قريباً ، سنقدم دورات العلاج الطبيعي المجاني والمدعوم!"
+
+#: .\templates\index.html:526
+msgid "Who We Are"
+msgstr "من نحن"
+
+#: .\templates\index.html:569
+msgid "Vision"
+msgstr "رؤية"
+
+#: .\templates\shop-details-1.html:16
+msgid "PRODUCT DESTAILS"
+msgstr "تفاصيل المنتج"
+
+#: .\templates\shop-details-1.html:92
+msgid "Add To Wishlist"
+msgstr "أضف إلى قائمة الرغبات"
+
+#: .\templates\shop-details-1.html:165
+msgid "Write a Review"
+msgstr "اكتب مراجعة"
+
+#: .\templates\shop-details-1.html:166
+msgid "Your email address will not published. Required fieled are marked."
+msgstr "لن يتم نشر عنوان بريدك الإلكتروني.المطلوبة العلامة مطلوبة."
+
+#: .\templates\shop-details-1.html:168
+msgid "Your Review"
+msgstr "مراجعتك"
+
+#: .\templates\shop-details-1.html:189
+msgid "Your Message"
+msgstr "رسالتك"
+
+#: .\templates\shop-details-1.html:194
+msgid "Full Name"
+msgstr "الاسم الكامل"
+
+#: .\templates\shop-details-1.html:204
+msgid "submit now"
+msgstr "أرسل الآن"
+
+#: .\templates\shop.html:16
+msgid "SHOP"
+msgstr "متجر"
+
+#: .\templates\shop.html:83
+msgid "We found"
+msgstr "وجدنا"
+
+#: .\templates\shop.html:83
+msgid "products are available for you"
+msgstr "المنتجات متوفرة لك"
+
+#: .\templates\shop.html:93
+msgid "Option 1"
+msgstr "الخيار 1"
+
+#: .\templates\shop.html:96
+msgid "Option 2"
+msgstr "الخيار 2"
+
+#: .\templates\shop.html:99
+msgid "Option 3"
+msgstr "الخيار 3"
+
+#: .\templates\singUp.html:66
+msgid "Sign Up as Supplier"
+msgstr "اشترك كمورد"
+
+#: .\templates\singUp.html:71
+msgid "Your phone"
+msgstr "رقم الهاتف"
+
+#: .\templates\singUp.html:78
+msgid "account statement"
+msgstr "بيان الحساب"
+
+#: .\templates\singUp.html:82
+msgid "Commercial register"
+msgstr "السجل التجاري"
+
+#: .\templates\singUp.html:86
+msgid "Tax card"
+msgstr "بطاقة الضرائب"
+
+#: .\templates\singUp.html:90
+msgid "A photo of the ID card"
+msgstr "صورة لبطاقة الهوية"
+
+#: .\templates\wishlist.html:45
+msgid "Stock Status"
+msgstr "حالة المخزون"
+
+#: .\templates\wishlist.html:73
+msgid "In Stock"
+msgstr "في الأوراق المالية"
+
+#: .\templates\wishlist.html:76
+msgid "Add To Cart"
+msgstr "أضف إلى السلة"
+
+#~ msgid "Product Image"
+#~ msgstr "صورة المنتج"
+
+#~ msgid "Product Images"
+#~ msgstr "صور المنتج"
+
+#~ msgid "Shopping Cart"
+#~ msgstr "عربة التسوق"
+
+#~ msgid "Shopping Carts"
+#~ msgstr "عربات التسوق"
+
+#~ msgid "No Image"
+#~ msgstr "لا توجد صورة"
+
+#, python-format
+#~ msgid "Directory \"%(directory)s\" does not exist."
+#~ msgstr "المجلد \"%(directory)s\" غير موجود."
+
+#~ msgid ""
+#~ "By accessing and purchasing from our medical store, you agree to the "
+#~ "following terms:"
+#~ msgstr ""
+#~ "من خلال الوصول والشراء من متجرنا الطبي ، فإنك توافق على الشروط التالية:"
+
+#~ msgid ""
+#~ "Our medical equipment is intended for professional and personal "
+#~ "healthcare use only."
+#~ msgstr "معداتنا الطبية مخصصة لاستخدام الرعاية الصحية المهنية والشخصية فقط."
+
+#~ msgid "Account Security:"
+#~ msgstr "أمن الحساب:"
+
+#~ msgid "You are responsible for keeping your login credentials safe."
+#~ msgstr "أنت مسؤول عن إبقاء بيانات اعتماد تسجيل الدخول الخاصة بك آمنة."
+
+#~ msgid "Shipping & Delivery:"
+#~ msgstr "الشحن والتسليم:"
+
+#~ msgid "Orders are processed within 3-5 business days."
+#~ msgstr "تتم معالجة الطلبات في غضون 3-5 أيام عمل."
+
+#~ msgid "Returns & Refunds:"
+#~ msgstr "عوائد واسترداد:"
+
+#~ msgid "Returns are accepted within 14 days under specific conditions."
+#~ msgstr "يتم قبول العوائد في غضون 14 يومًا في ظل ظروف محددة."
+
+#~ msgid "Payment Policy:"
+#~ msgstr "سياسة الدفع:"
+
+#~ msgid "All payments are secured, and transactions are encrypted."
+#~ msgstr "يتم تأمين جميع المدفوعات ، والمعاملات مشفرة."
+
+#~ msgid "Legal Compliance:"
+#~ msgstr "الامتثال القانوني:"
+
+#~ msgid "We comply with local healthcare and eCommerce regulations."
+#~ msgstr "نحن نمتثل للرعاية الصحية والتجارة الإلكترونية المحلية."
+
+#~ msgid "Contact Support:"
+#~ msgstr "دعم الاتصال:"
+
+#~ msgid "Have questions?"
+#~ msgstr "لديك أسئلة؟"
+
+#~ msgid "Contact us"
+#~ msgstr "اتصل بنا"
+
+#~ msgid "Apply now"
+#~ msgstr "تقدم الآن"
+
+#~ msgid "16122 Collins Street West Victoria 8007 Australia"
+#~ msgstr "16122 شارع كولينز ويست فيكتوريا 8007 أستراليا"
+
+#~ msgid "Tearms & Condition"
+#~ msgstr "الشروط والشرط"
+
+#~ msgid ""
+#~ "Phyzioline is a forward-thinking software company dedicated to "
+#~ "transforming the physical therapy and rehabilitation industry"
+#~ msgstr ""
+#~ "Phyzioline هي شركة برمجيات تفكير إلى الأمام مكرسة لتحويل صناعة العلاج "
+#~ "الطبيعي وإعادة التأهيل"
+
+#~ msgid ""
+#~ "We offer a diverse range of digital solutions tailored to meet the "
+#~ "evolving needs of therapists, students, and healthcare institutions."
+#~ msgstr ""
+#~ "نحن نقدم مجموعة متنوعة من الحلول الرقمية المصممة لتلبية الاحتياجات "
+#~ "المتطورة للمعالجين والطلاب ومؤسسات الرعاية الصحية."
+
+#~ msgid ""
+#~ "Our platform encompasses services such as virtual counseling, case "
+#~ "management tools, educational courses, job matching, device retail and "
+#~ "rentals, data analytics, and targeted advertising."
+#~ msgstr ""
+#~ "يشمل منصتنا خدمات مثل الاستشارة الافتراضية ، وأدوات إدارة الحالات ، "
+#~ "والدورات التعليمية ، ومطابقة الوظائف ، وتجارة التجزئة والأجهزة ، وتحليلات "
+#~ "البيانات ، والإعلانات المستهدفة."
+
+#~ msgid "Dr Mahmoud Mosbah"
+#~ msgstr "الدكتور محمود مصباح"
+
+#~ msgid "CEO"
+#~ msgstr "المدير التنفيذي"
+
+#~ msgid ""
+#~ "*Phyzioline* is to revolutionize the physical therapy landscape by "
+#~ "providing cutting-edge digital solutions that empower clinics, "
+#~ "therapists, and patients. We strive to enhance care delivery through "
+#~ "seamless case management, data-driven insights, comprehensive educational "
+#~ "resources, and innovative service offerings that promote wellness and "
+#~ "rehabilitation."
+#~ msgstr ""
+#~ "* Phyzioline* هو إحداث ثورة في مشهد العلاج الطبيعي من خلال توفير حلول "
+#~ "رقمية متطورة تمكن العيادات والمعالجين والمرضى.نحن نسعى جاهدين لتعزيز "
+#~ "تقديم الرعاية من خلال إدارة الحالات السلس ، والرؤى التي تعتمد على "
+#~ "البيانات ، والموارد التعليمية الشاملة ، وعروض الخدمات المبتكرة التي تعزز "
+#~ "العافية وإعادة التأهيل."
+
+#~ msgid ""
+#~ "Our vision is to be the leading global platform for physical therapy "
+#~ "management, education, and analytics. We aim to create a connected "
+#~ "ecosystem where technology and healthcare unite to improve patient "
+#~ "outcomes, optimize clinic operations, and foster continuous learning for "
+#~ "professionals in the field."
+#~ msgstr ""
+#~ "رؤيتنا هي أن تكون المنصة العالمية الرائدة لإدارة العلاج الطبيعي والتعليم "
+#~ "والتحليلات.نحن نهدف إلى إنشاء نظام بيئي متصل حيث تقوم التكنولوجيا "
+#~ "والرعاية الصحية بتحديد نتائج المريض ، وتحسين عمليات العيادة ، وتعزيز "
+#~ "التعلم المستمر للمهنيين في هذا المجال."
+
+#~ msgid "Related Products"
+#~ msgstr "المنتجات ذات الصلة"
+
+#, python-format
+#~ msgid "Shopping Over $59 or first purchase you will get 100%% free shipping"
+#~ msgstr ""
+#~ "التسوق أكثر من 59 دولارًا أو عملية الشراء الأولى ستحصل على شحن مجاني 100 ٪٪"

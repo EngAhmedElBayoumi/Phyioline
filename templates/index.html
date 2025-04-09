@@ -1,0 +1,588 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% load i18n %}
+{% load product_tags %}
+    {% block style %}
+    <style>
+      .swiper-button-prev,
+      .swiper-button-next {
+        width: 40px;
+        height: 40px;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        font-size: 16px;
+        color: #333;
+        font-weight: bold;
+      }
+      .patient-card {
+        border: 2px solid rgba(232, 238, 247, 1);
+        border-radius: 20px;
+        padding: 50px;
+        text-align: left;
+        height: 500px;
+      }
+      
+      .badg {
+        background: rgba(235, 237, 240, 1);
+        color: #333;
+        font-weight: bold;
+        padding: 10px 25px;
+        border-radius: 30px;
+        width: 150px;
+        text-align: center;
+      }
+      .bade {
+        background: rgba(235, 237, 240, 1);
+        color: #333;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 30px;
+        width: 120px;
+        text-align: center;
+      }
+    </style>
+    {% endblock %}
+{% block content %}
+{% include 'components/header.html' %}
+
+    <!--  main body - start
+		==================================================  -->
+    <main>
+      <!--  slider-section - start
+			==================================================  -->
+      <section id="slider-section" class="slider-section clearfix">
+        <div class="item d-flex align-items-center" data-background="{% static 'assets/images/hero-bg.png' %}" style="height: 100vh">
+          <div class="container">
+            <div class="d-flex flex-column align-items-center">
+              <h1 class="hero-text">{% trans "Physicaltherapy Software Solutions" %}</h1>
+            </div>
+            <div class="hero-size">
+              <h5 class="hero-praph">{% trans "All Physical Therapist Needs is Our Mission From PT to PT" %}</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  slider-section - end
+			==================================================  -->
+
+      <!--  promotion-section - start
+			==================================================  -->
+      <section class="mt-5">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-12">
+              <div class="d-flex justify-content-between align-items-center border-promotion">
+                <span class="main-color promotion-text">{% trans "Join as a Supplier" %}</span>
+                <a href="{% url 'home:apply' %}">
+                  
+                  <button class="main-color border-btn px-5 py-2 mx-3">{% trans "Join" %}</button>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  promotion-section - end
+			==================================================  -->
+
+      <!--  shop-section - start
+			==================================================  -->
+      <section class="shop-section sec-ptb-100 decoration-wrap clearfix">
+        <div class="container">
+          <div class="section-title text-center mb-70">
+            <h2 class="mb-3" style="color: #36415a">{% trans "Product By Category" %}</h2>
+          </div>
+
+          <div class="tabs-nav ul-li-center clearfix">
+            <ul class="nav d-flex justify-content-center" role="tablist">
+                {% for cat in categories %}
+                <li>
+                    <a class="nav-link {% if forloop.first %} active {% endif %} mt-3" href="#dev-{{ cat.id }}" data-toggle="tab" role="tab">{{ cat.name }}</a>
+                </li>
+                {% endfor %}
+                <li>
+                    <a class="nav-link mt-3" href="{% url 'product:product' %}" role="tab">{% trans "Other" %}</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tab-content">
+            {% for cat in categories %}
+            <div id="dev-{{ cat.id }}" class="tab-pane fade {% if forloop.first %} active show {% endif %}">
+                <div class="row justify-content-center mb-70">
+                    {% for product in category_products|get_item:cat.name %}
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="product-grid text-center clearfix">
+                            <div class="item-image">
+                                <a href="{% url 'product:shop_details' product.slug %}" class="image-wrap">
+                                    <img src="{{ product.main_image.url }}" style="height: 360px;" alt="{{ product.title }}" />
+                                </a>
+                                {% if product.discount > 0 %}
+                                <div class="post-label ul-li-right clearfix">
+                                    <ul class="clearfix">
+                                        <li class="bg-skyblue">-{{ product.discount }}%</li>
+                                    </ul>
+                                </div>
+                                {% endif %}
+                                <div class="btns-group ul-li-center clearfix">
+                                    <ul class="clearfix">
+                                      <li>
+                                        <a href="{% url 'product:add_to_card_2' product.slug %}" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="las la-shopping-basket"></i></a>
+                                      </li>
+        
+                                      <li>
+                                        <a href="{% url 'product:add_to_wishlist_2' product.slug %}" data-toggle="tooltip" data-placement="top" title="Add To Wishlist"><i class="lar la-heart"></i></a>
+                                      </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                <h3 class="item-title"><a href="{% url 'product:shop_details' product.slug %}">{{ product.title }}</a></h3>
+                                <span class="item-price">{% trans "EG" %}{{ product.price }}</span>
+                                <div class="rating-star ul-li-center clearfix">
+                                    <ul class="clearfix">
+                                        {% for i in "12345"|make_list %}
+                                        <li class="{% if forloop.counter <= product.rate %}active{% endif %}">
+                                            <i class="las la-star"></i>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <div class="col-12 text-center">
+                        <p>No products available in this category.</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="btn-wrap text-center clearfix">
+                    <a href="{% url 'product:product' %}" class="btn bg-light-green">{% trans "VIEW ALL" %}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+
+        <span class="decoration-image pill-image-1"><img src="{% static 'assets/images/decoration/pill_2.png' %}" alt="pill_image_not_found" /></span>
+      </section>
+
+      <div class="quickview-modal modal fade" id="quickview-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content clearfix">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="item-image">
+              <img src="{% static 'assets/images/product/img_12.jpg' %}" alt="image_not_found" />
+            </div>
+            <div class="item-content">
+              <h2 class="item-title mb-15">Digital Infrared Thermometer</h2>
+              <div class="rating-star ul-li mb-30 clearfix">
+                <ul class="float-left mr-2">
+                  <li class="active">
+                    <i class="las la-star"></i>
+                  </li>
+                  <li class="active">
+                    <i class="las la-star"></i>
+                  </li>
+                  <li class="active">
+                    <i class="las la-star"></i>
+                  </li>
+                  <li class="active">
+                    <i class="las la-star"></i>
+                  </li>
+                  <li>
+                    <i class="las la-star"></i>
+                  </li>
+                </ul>
+                <span class="review-text">(12 {% trans "Reviews" %})</span>
+              </div>
+              <span class="item-price mb-15">{% trans "EG" %}49.50</span>
+              <p class="mb-30">{% trans "Best Electronic Digital Thermometer adipiscing elit, sed do eiusmod teincididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse us ultrices gravidaes. Risus commodo viverra maecenas accumsan lacus vel facilisis." %}</p>
+              <div class="quantity-form mb-30 clearfix">
+                <strong class="list-title">{% trans "Quantity" %}:</strong>
+                <div class="quantity-input">
+                  <form action="#">
+                    <span class="input-number-decrement">–</span>
+                    <input class="input-number-1" type="text" value="1" />
+                    <span class="input-number-increment">+</span>
+                  </form>
+                </div>
+              </div>
+              <div class="btns-group ul-li mb-30">
+                <ul class="clearfix">
+                  <li>
+                    <a href="#!" class="btn bg-royal-blue">{% trans "Add to Cart" %}</a>
+                  </li>
+                  <li>
+                    <a href="#!" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare Product"><i class="las la-sync"></i></a>
+                  </li>
+                  <li>
+                    <a href="#!" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wishlist"><i class="lar la-heart"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="info-list ul-li-block">
+                <ul class="clearfix">
+                  <li>
+                    <strong class="list-title">{% trans "Category" %}:</strong>
+                    <a href="#!">{% trans "Medical Equipment" %}</a>
+                  </li>
+                  <li class="social-icon ul-li">
+                    <strong class="list-title">{% trans "Share" %}:</strong>
+                    <ul class="clearfix">
+                      <li>
+                        <a href="#!"><i class="lab la-facebook"></i></a>
+                      </li>
+                      <li>
+                        <a href="#!"><i class="lab la-twitter"></i></a>
+                      </li>
+                      <li>
+                        <a href="#!"><i class="lab la-instagram"></i></a>
+                      </li>
+                      <li>
+                        <a href="#!"><i class="lab la-pinterest-p"></i></a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  shop-section - end
+			==================================================  -->
+
+      <section id="privateCases" class="my-5 section-PrivateCases">
+        <div class="container bg-cases">
+          <div class="row justify-content-center d-flex align-items-center">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img-offers">
+              <img style="max-width: 100%;" src="{% static 'assets/images/37452044_8502937 1.svg' %}" width="90%" alt="" />
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-offers">
+              <h1 class="text-PrivateCases">{% trans "Find a Private Cases" %}</h1>
+            </div>
+          </div>
+          <div class="d-flex justify-content-start title-offers mt-5">
+            <span class="phrgraph-job">{% trans "We offer specialized treatment for a variety of conditions. Our expert team is dedicated to providing the best therapies to improve your quality of life and restore your movement naturally. Get ready to return to activity with comfort and safety." %}</span>
+          </div>
+        </div>
+        <section data-aos="fade-up" class="agency-list-banner" data-aos-duration="3000">
+          <div class="agency-list">
+            <div class="slider">
+              <div class="slide-track">
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section data-aos="fade-up" class="agency-list-banner2" data-aos-duration="3000">
+          <div class="agency-list">
+            <div class="slider">
+              <div class="slide-track">
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="System" class="section-container">
+        <div class="container bg-case">
+          <div class="row justify-content-center d-flex align-items-center p-2">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-offers">
+              <h1 class="element-offers">{% trans "CLINIC MANAGEMENT SYSTEMS" %}</h1>
+              <h4 class="element-offer">{% trans "by Phyzioline" %}</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img-offers">
+              <img style="max-width: 100%;" src="{% static 'assets/images/Untitled-1سسس_3-removebg-preview.png' %}" width="90%" alt="" />
+            </div>
+          </div>
+          <div style="width: 800px; max-width: 100%;" class="d-flex justify-content-start title-offers m-0">
+            <span class="span-offers">{% trans "Empowering Physical Therapy Through Innovation Where Healing Meets Technology, and Possibilities are Redefined" %}</span>
+          </div>
+        </div>
+        <button class="custom-button">{% trans "SOON THE OPENING" %}</button>
+      </section>
+
+      <section id="jobs" class="section-PrivateCases">
+        <div class="container bg-cases">
+          <div class="row justify-content-center d-flex align-items-center">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img-offers">
+              <img style="max-width: 100%;" src="{% static 'assets/images/37452044_8502937 1.svg' %}" width="90%" alt="" />
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-offers">
+              <h1 class="text-jobs">{% trans "Physiotherapy JObS" %}</h1>
+              <h4 style="color: #02767F ;">{% trans "by Phyzioline" %}</h4>
+            </div>
+          </div>
+          <div class="d-flex justify-content-start title-offers mt-5">
+            <span class="phrgraph-job">{% trans "Soon, job opportunities in the field of physiotherapy will be open! If you're interested, you'll have the chance to work with specialists to provide treatments that help improve patients' movement and physical functions. Stay tuned for more details coming soon!" %}</span>
+          </div>
+        </div>
+        <section data-aos="fade-up" class="agency-list-banner" data-aos-duration="3000">
+          <div class="agency-list">
+            <div class="slider">
+              <div class="slide-track">
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i> {% trans "Coming Soon" %} |</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section data-aos="fade-up" class="agency-list-banner2" data-aos-duration="3000">
+          <div class="agency-list">
+            <div class="slider">
+              <div class="slide-track">
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+                <div class="slide">
+                  <h3><i class="bi bi-asterisk"></i>{% trans "Coming Soon" %}|</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- start Physiotherapy courses -->
+
+      <section id="courses" class="section-Physiotherapy">
+        <div class="container div-Physiotherapy">
+          <div class="element-img">
+            <img style="max-width: 100%;" src="{% static 'assets/images/8ce3145515c33b8e9c71fb534838b36c.png' %}" width="100%" alt="" />
+          </div>
+          <div class="text-Physiotherapy">
+            <h4 class="element-Physiotherapy">{% trans "Physiotherapy courses" %}</h4>
+            <h6 class="element-coures">{% trans "by Phyzioline" %}</h6>
+            <div class="phrgraph-Physiotherapy">
+              <p>{% trans "Soon, we will be offering free and subsidized Physiotherapy courses!" %}</p>
+            </div>
+          </div>
+          <div class="img-Physiotherapy">
+            <img src="{% static 'assets/images/Soon.svg' %}" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- end Physiotherapy courses -->
+      <!--  about-section - start
+		
+    
+    
+    
+    
+        ==================================================  -->
+      <section id="about" class="about-section clearfix my-5" {% if LANGUAGE_CODE == 'ar' %} style="direction: rtl;" {% endif %}>
+        <div class="container">
+          <div class="about-title text-center mt-5 mb-2">
+            <h1 class="title-text" style="color: #36415a">{% trans "Who We Are" %}</h1>
+          </div>
+          <div class="row justify-content-center d-flex align-items-center">
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+              <div class="section-title mb-60" style="color:black;">
+                {% if LANGUAGE_CODE == 'en' %}
+                {{about.description|safe}}
+                {% else %}
+                {{about.description_ar|safe}}
+                {% endif %}
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
+              <div class="section-image text-center mb-60">
+                <img src="{{ about.image.url }}" alt="image_not_found" width="75%" />
+                <h5 style="color: #36415A; text-align: center;" class="mt-3">
+                  {% if LANGUAGE_CODE == 'en' %}
+                  {{about.name|safe}}
+                  {% else %}
+                  {{about.name_ar|safe}}
+                  {% endif %}
+                </h5>
+                <p>
+                  {% if LANGUAGE_CODE == 'en' %}
+                  {{about.job_title|safe}}
+                  {% else %}
+                  {{about.job_title_ar|safe}}
+                  {% endif %}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="mission" {% if LANGUAGE_CODE == 'en' %} style="text-align: left;" {% else %} style="text-align: right;" {% endif %}>
+              <img src="{% static 'assets/images/rocket.svg' %}" alt="" width="50px" />
+              <h3 style="color: #36415A; display: inline;" class="mx-2">{% trans "Mission" %}</h3>
+              <p class="text-about">
+                {% if LANGUAGE_CODE == 'en' %} {{mission.description|safe}} {% else %} {{mission.description_ar|safe}} {% endif %}
+              </p>
+            </div>
+            <div class="vision"{% if LANGUAGE_CODE == 'en' %} style="text-align: left;" {% else %} style="text-align: right;" {% endif %} >
+              <img src="{% static 'assets/images/lamp.svg' %}" alt="" width="50px" />
+              <h3 style="color: #36415A; display: inline;" class="mx-2">{% trans "Vision" %}</h3>
+              <p class="text-about">
+                {% if LANGUAGE_CODE == 'en' %} {{vission.description|safe}} {% else %} {{vission.description_ar|safe}} {% endif %}
+               
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  about-section - end
+			==================================================  -->
+    </main>
+    <!--  main body - end
+		==================================================  -->
+    
+    {% include 'components/footer.html' %}
+
+    {% endblock %}
+

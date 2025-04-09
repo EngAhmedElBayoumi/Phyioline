@@ -1,0 +1,154 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="blue-theme">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PHYZIOLINE | Dashboard</title>
+    <!-- favicon -->
+    <link rel="icon" href="images/Frame 127.svg" type="image/png" />
+    <!-- loader -->
+    <link href="{% static 'dash/assets/css/pace.min.css' %}" rel="stylesheet" />
+    <script src="{% static 'dash/assets/js/pace.min.js' %}"></script>
+
+    <!-- plugins -->
+    <link href="{% static 'dash/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{% static 'dash/assets/plugins/metismenu/metisMenu.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'dash/assets/plugins/metismenu/mm-vertical.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'dash/assets/plugins/simplebar/css/simplebar.css' %}" />
+    <!-- bootstrap css -->
+    <link href="{% static 'dash/assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- main css -->
+    <link href="{% static 'dash/assets/css/bootstrap-extended.css' %}" rel="stylesheet" />
+    <link href="{% static 'dash/sass/main.css' %}" rel="stylesheet" />
+    <link href="{% static 'dash/sass/dark-theme.css' %}" rel="stylesheet" />
+    <link href="{% static 'dash/sass/semi-dark.css' %}" rel="stylesheet" />
+    <link href="{% static 'dash/sass/bordered-theme.css' %}" rel="stylesheet" />
+    <link href="{% static 'dash/sass/responsive.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'dash/css/dash.css' %}" />
+
+    <style>
+      body {
+        background: linear-gradient(90deg, #02767f 0%, #04d5e5 100%);
+      }
+      .card-signup {
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* تأثير الظل */
+        text-align: center;
+        transition: 0.3s;
+      }
+      
+      .card-signup:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* ظل أقوى عند التحويم */
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <div class="container">
+        <div class="row mt-3 justify-content-center">
+          <div class="col-lg-6 col-sm-12 col-xl-6">
+            <div class="card-back">
+              <div class="center-wrap card-signup p-3">
+                <form method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+                <div class="d-flex justify-content-center">
+                  <img style="max-width: 100%;" src="{% static 'dash/images/Frame 131.svg' %}" width="200px" alt="" />
+                </div>
+                <h4 style="color: #02767F;" class="text-center my-2">{% trans "Sign Up as Supplier" %}</h4>
+                <div class="form-group">
+                  <input type="text" class="form-control mb-3" placeholder="{% trans 'Your Name' %}" name="name" autocomplete="off" required />
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control mb-3" placeholder="{% trans 'Your phone' %}" name="phone" autocomplete="off" required />
+                </div>
+
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" placeholder="{% trans 'Your Email' %}" autocomplete="off" required />
+                </div>
+                <div class="form-group">
+                  <label style="display: block; text-align: start;font-size: 16px; color: #02767F; " for="account">{% trans "account statement" %}</label>
+                  <input style="border: 2px solid #02767F; padding: 5px 5px;border-radius: 6px;width: 100%; color: #02767F;" type="file" name="account_statement" id="account" required />
+                </div>
+                <div class="form-group">
+                  <label style="display: block; text-align: start;font-size: 16px; color: #02767F; " for="account">{% trans "Commercial register" %}</label>
+                  <input style="border: 2px solid #02767F; padding: 5px 5px;border-radius: 6px;width: 100%; color: #02767F;" type="file" name="commercial_register" id="account"  required/>
+                </div>
+                <div class="form-group">
+                  <label style="display: block; text-align: start;font-size: 16px; color: #02767F; " for="account">{% trans "Tax card" %}</label>
+                  <input style="border: 2px solid #02767F; padding: 5px 5px;border-radius: 6px;width: 100%; color: #02767F;" type="file" name="tax_card" id="account" required />
+                </div>
+                <div class="form-group">
+                  <label style="display: block; text-align: start;font-size: 16px; color: #02767F; " for="account">{% trans "A photo of the ID card" %}</label>
+                  <input style="border: 2px solid #02767F; padding: 5px 5px;border-radius: 6px;width: 100%; color: #02767F;" type="file" name="id_card" id="account"  required/>
+                </div>
+
+                <div class="form-group">
+                  <input type="password" class="form-control my-3" placeholder="{% trans 'Your Password' %}" autocomplete="off" name="password" required />
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control my-3" placeholder="{% trans 'Confirm Password' %}" autocomplete="off"  name="confirm_password" required />
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button type="submit" style="background-color:#02767F ; color: #fff;" class="btn">{% trans "Sign Up" %}</button>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- bootstrap js -->
+    <script src="{% static 'dash/assets/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script>
+      document.getElementById('toggle-button').addEventListener('click', function () {
+        var footer = document.getElementById('footer-section')
+      
+        if (footer.style.display === 'none') {
+          footer.style.display = 'block'
+        } else {
+          footer.style.display = 'none'
+        }
+      })
+    </script>
+
+    <!-- bootstrap js -->
+    <script src="{% static 'dash/assets/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- plugins -->
+    <script src="{% static 'dash/assets/js/jquery.min.js' %}"></script>
+    <!-- plugins -->
+    <script src="{% static 'dash/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js' %}"></script>
+    <script src="{% static 'dash/assets/plugins/metismenu/metisMenu.min.js' %}"></script>
+    <script src="{% static 'dash/assets/plugins/datatable/js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'dash/assets/plugins/datatable/js/dataTables.bootstrap5.min.js' %}"></script>
+    <script>
+      $(document).ready(function () {
+        $('#example').DataTable()
+      })
+    </script>
+    <script>
+      $(document).ready(function () {
+        var table = $('#example2').DataTable({
+          lengthChange: false,
+          buttons: ['copy', 'excel', 'pdf', 'print']
+        })
+      
+        table.buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)')
+      })
+    </script>
+    <script src="{% static 'dash/assets/plugins/simplebar/js/simplebar.min.js' %}"></script>
+    <script src="{% static 'dash/assets/js/main.js' %}"></script>
+  </body>
+</html>

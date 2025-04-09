@@ -1,0 +1,92 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html  {% if request.LANGUAGE_CODE == 'ar' %} lang="ar" dir="rtl" {% else %} lang="en" {% endif %}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>{% trans "Phyzioline" %}</title>
+    <link rel="shortcut icon" href="assets/images/logo.png" />
+
+    <!-- css include -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/line-awesome.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/magnific-popup.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/jquery-ui.css' %}" />
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400&display=swap" rel="stylesheet" />
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    {% if LANGUAGE_CODE == "en" %}
+    <!-- custom - css include -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}" />
+    {% endif %}
+
+    {% if LANGUAGE_CODE == "ar" %}
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style-ar.css' %}" />
+    {% endif %}
+    
+    {% block style %}
+    {% endblock %}
+    
+  </head>
+  <body class="home-v1">
+    {% include 'components/alert.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+        },
+        breakpoints: {
+          992: { slidesPerView: 4 },
+          768: { slidesPerView: 2 },
+          576: { slidesPerView: 1 },
+          425: { slidesPerView: 1 },
+          200: { slidesPerView: 1 }
+        }
+      })
+    </script>
+    <!-- jquery include -->
+    <script src="{% static 'assets/js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-ui.js' %}"></script>
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel2.thumbs.min.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/countdown.js' %}"></script>
+
+    <!-- google map - jquery include -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk2HrmqE4sWSei0XdKGbOMOHN3Mm2Bf-M&ver=2.1.6"></script>
+    <script src="{% static 'assets/js/gmaps.min.js' %}"></script>
+
+    <!-- mobile menu - jquery include -->
+    <script src="{% static 'assets/js/mCustomScrollbar.js' %}"></script>
+
+    <!-- custom - jquery include -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+  </body>
+</html>

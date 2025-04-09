@@ -1,0 +1,97 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% load i18n %}
+{% block style %}
+<style>
+  .terms-header {
+    text-align: center;
+    color: #0077b6;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  .terms-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .terms-item {
+    background: #e3f2fd;
+    margin: 15px 0;
+    padding: 15px;
+    border-left: 5px solid #0077b6;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+  }
+  .terms-item:hover {
+    background: #bbdefb;
+  }
+  .terms-item i {
+    font-size: 1.5rem;
+    color: #0077b6;
+    margin-right: 10px;
+  }
+  .terms-footer {
+    text-align: center;
+    color: #6c757d;
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 768px) {
+    .terms-container {
+      padding: 25px;
+      margin: 10% auto;
+    }
+    .terms-header {
+      font-size: 1.5rem;
+    }
+    .terms-item {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+{% endblock %}
+{% block content %}
+{% include 'components/header.html' %}
+
+
+    <!--  main body - start
+		==================================================  -->
+    <main>
+      <!--  slider-section - start
+			==================================================  -->
+      <section id="slider-section" class="slider-section clearfix">
+        <div class="item d-flex align-items-center" data-background="{% static 'assets/images/hero-bg.png' %}" style="height: 100vh">
+          <div class="container">
+            <div class="d-flex flex-column align-items-center">
+              <h1 class="hero-text">{% trans "Physicaltherapy Software Solutions" %}</h1>
+            </div>
+            <div class="hero-size">
+              <h5 class="hero-praph">{% trans "All Physical Therapist Needs is Our Mission From PT to PT" %}</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  slider-section - end
+			==================================================  -->
+      <Section>
+        <div class="container">
+          <div class="terms-container">
+            <h1 class="terms-header mt-4">{% trans "Return Policy for Phyzioline " %}</h1>
+            {% if request.LANGUAGE_CODE == 'ar' %}
+            {{refund.description_ar|safe}}
+            {% else %}
+            {{refund.description|safe}}
+            {% endif %}
+          </div>
+        </div>
+      </Section>
+
+      <!--  footer-section - start
+		==================================================  -->
+ 
+      
+    {% include 'components/footer.html' %}
+
+    {% endblock %}

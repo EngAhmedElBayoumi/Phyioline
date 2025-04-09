@@ -1,0 +1,746 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% load i18n %}
+{% block content %}
+{% include 'components/header.html' %}
+
+    <!--  main body - start
+		==================================================  -->
+    <main>
+      <!--  breadcrumb-section - start
+			==================================================  -->
+      <section id="slider-section" class="slider-section clearfix">
+        <div class="item d-flex align-items-center" data-background="{% static 'assets/images/hero-bg.png' %}" style="height: 70vh">
+          <div class="container">
+            <div class="text-center mt-5 mb-5">
+              <h1>{% trans "PRODUCT DESTAILS" %}</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  breadcrumb-section - end
+			==================================================  -->
+
+      <!--  details-section - start
+			==================================================  -->
+      <section class="details-section sec-ptb-100 pb-0 clearfix">
+        <div class="container">
+          <div class="row mb-100 justify-content-lg-between justify-content-md-between justify-content-sm-center">
+            <div class="col-lg-5 col-md-5 col-sm-8 col-xs-12">
+              <div class="details-image">
+                <div class="details-image-carousel owl-carousel owl-theme" data-slider-id="thumbnail-carousel">
+                  {% for image in product.images.all %}
+                  <div class="item">
+                    <img src="{{ image.image.url }}" alt="image_not_found" />
+                  </div>
+                  {% endfor %}
+                </div>
+                <div class="owl-thumbs clearfix" data-slider-id="thumbnail-carousel">
+                  {% for image in product.images.all %}
+
+                  <button class="item"><span><img src="{{ image.image.url }}" alt="image_not_found" /></span></button>
+                  {% endfor %}
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7 col-md-7 col-sm-8 col-xs-12">
+              <div class="details-content pl-20">
+                <span class="post-type mb-15">{{product.category.name}}</span>
+                <h2 class="item-title second-color mb-15">{{product.title}}</h2>
+                <div class="rating-star ul-li mb-30 clearfix">
+                  <ul class="float-left mr-2">
+                    {% with full_stars=product.rate|floatformat:0 half_star=product.rate|floatformat:1 %}
+                        {% for i in "12345" %}
+                            {% if forloop.counter <= full_stars|add:0 %}
+                                <li class="active"><i class="las la-star"></i></li>
+                            {% elif forloop.counter == full_stars|add:1 and half_star|floatformat:1|slice:"-1" == "5" %}
+                                <li class="active"><i class="las la-star-half-alt"></i></li>
+                            {% else %}
+                                <li><i class="las la-star"></i></li>
+                            {% endif %}
+                        {% endfor %}
+                    {% endwith %}
+                  </ul>
+                  <span class="review-text">({{reviews_count}} {% trans "Reviews" %})</span>
+                </div>
+                <span class="item-price mb-30">{% trans "EG" %}{{product.price}}</span>
+                <p class="mb-40 text-description">
+                  {{product.description|safe|truncatewords:50}}
+                </p>
+                <div class="quantity-form mb-30 clearfix">
+                  <strong class="list-title">{% trans "Quantity" %}</strong>
+                  <div class="quantity-input">
+                      <form id="add-to-cart-form" method="GET" action="{% url 'product:add_to_card' product.slug %}">
+                          {% csrf_token %}
+                          <span class="input-number-decrement">–</span>
+                          <input class="input-number-1" type="number" name="quantity" value="1" min="1" />
+                          <span class="input-number-increment">+</span>
+                      </form>
+                  </div>
+              </div>
+              <div id="cart-success-message" style="display: none; color: green; font-weight: bold; margin-top: 10px;">
+                ✅ Item added to cart!
+            </div>
+                <div class="btns-group ul-li mb-30">
+                  <ul class="clearfix">
+                    <li>
+                      <button id="add-to-cart-btn" class="btn bg-royal-blue">{% trans "Add to Cart" %}</button>
+                      </li>
+                    <li>
+                      <a href="{% url 'product:add_to_wishlist' product.slug %}" class="wishlist-btn" data-slug="{{ product.slug }}" data-toggle="tooltip" data-placement="top" title="{% trans 'Add To Wishlist' %}">
+                        <i class="lar la-heart"></i>
+                    </a>
+                  </li>
+                  </ul>
+                </div>
+                <div class="info-list ul-li-block">
+                  <ul class="clearfix">
+                    <li>
+                      <strong class="list-title">{% trans "SKU" %}</strong> {{product.SKU}}
+                    </li>
+                    <li>
+                      <strong class="list-title">{% trans "Category" %}</strong> <a href="{% url 'product:category_filter' product.category.name %}">{{product.category.name}}</a>
+                    </li>
+                    <li class="tag-list ul-li">
+                      <strong class="list-title">{% trans "Tags" %}</strong>
+                      <ul class="clearfix">
+                        {% for tag in product.tags.all %}
+                        <li>
+                          <a href="#">{{tag.name}}</a>
+                        </li>
+                        {% endfor %}
+                        
+                      </ul>
+                    </li>
+                    <li class="social-icon ul-li">
+                      <strong class="list-title">{% trans "Share" %}</strong>
+                      <ul class="clearfix">
+                        <li>
+                          <a href="#!"><i class="lab la-facebook"></i></a>
+                        </li>
+                        <li>
+                          <a href="#!"><i class="lab la-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="#!"><i class="lab la-instagram"></i></a>
+                        </li>
+                        <li>
+                          <a href="#!"><i class="lab la-pinterest-p"></i></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="information-area">
+            <div class="tabs-nav ul-li mb-40">
+              <ul class="nav" role="tablist">
+                <li>
+                  <a class="active" data-toggle="tab" href="#description-tab">{% trans "Description" %}</a>
+                </li>
+
+                <li>
+                  <a data-toggle="tab" href="#reviews-tab">{% trans "Reviews" %}</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-content">
+              <div id="description-tab" class="tab-pane active">
+                <div class="row">
+                  <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                    {{product.description|safe}}
+                  </div>
+                </div>
+              </div>
+
+              <div id="reviews-tab" class="tab-pane fade">
+                <div class="row">
+                  <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                    <h3 class="title-text mb-15">{% trans "Write a Review" %}</h3>
+                    <p class="mb-30">{% trans "Your email address will not published. Required fieled are marked." %}</p>
+                    <div class="rating-star ul-li mb-70 clearfix">
+                      <span class="review-text float-left mr-3">{% trans "Your Review" %}:</span>
+                      <ul class="clearfix">
+                        <li class="active">
+                          <i class="las la-star"></i>
+                        </li>
+                        <li class="active">
+                          <i class="las la-star"></i>
+                        </li>
+                        <li class="active">
+                          <i class="las la-star"></i>
+                        </li>
+                        <li class="active">
+                          <i class="las la-star"></i>
+                        </li>
+                        <li>
+                          <i class="las la-star"></i>
+                        </li>
+                      </ul>
+                    </div>
+                    <form action="#">
+                      <div class="form-item">
+                        <textarea name="message" placeholder="{% trans 'Your Message' %}"></textarea>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                          <div class="form-item">
+                            <input type="text" name="name" placeholder="{% trans 'Full Name' %}*" />
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                          <div class="form-item">
+                            <input type="email" name="email" placeholder="{% trans 'Your Email' %}" />
+                          </div>
+                        </div>
+                      </div>
+                      <button type="button" class="btn bg-royal-blue">{% trans "submit now" %}</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  details-section - end
+			==================================================  -->
+
+      <!--  shop-section - start
+			==================================================  -->
+      {% comment %} <section id="shop-section" class="shop-section sec-ptb-100 decoration-wrap clearfix">
+        <div class="container">
+          <div class="section-title text-center mb-70">
+            <h2 class="title-text mb-3">{% trans "Related Products" %}</h2>
+          </div>
+
+          <div id="column-4-carousel" class="column-4-carousel arrow-right-left owl-carousel owl-theme">
+            <div class="item">
+              <div class="product-grid text-center clearfix">
+                <div class="item-image">
+                  <a href="shop-details-1.html" class="image-wrap"><img src="{% static 'assets/images/API_4778-INT_CH-2201-TRANSPORT2-PRD-WHITE-FRONT_DETAIL_ON_CART-T0001_1 1.svg' %}" alt="image_not_found" /></a>
+                  <div class="post-label ul-li-right clearfix">
+                    <ul class="clearfix">
+                      <li class="bg-skyblue">-19%</li>
+                      <li class="bg-skyblue">TOP</li>
+                    </ul>
+                  </div>
+                  <div class="btns-group ul-li-center clearfix">
+                    <ul class="clearfix">
+                      <li>
+                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="las la-shopping-basket"></i></a>
+                      </li>
+                      <li>
+                        <a class="tooltipes" href="#!" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quickview-modal"><i class="las la-dot-circle"></i></a>
+                      </li>
+                      <li>
+                        <a href="#!" data-toggle="tooltip" data-placement="top" title="Add To Wishlist"><i class="lar la-heart"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h3 class="item-title"><a href="#!">Surgical Hand Gloves</a></h3>
+                  <span class="item-price">{% trans "EG" %}49.50</span>
+                  <div class="rating-star ul-li-center clearfix">
+                    <ul class="clearfix">
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li>
+                        <i class="las la-star"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="product-grid text-center clearfix">
+                <div class="item-image">
+                  <a href="shop-details-1.html" class="image-wrap"><img src="{% static 'assets/images/img_4.jpg.svg' %}" alt="image_not_found" /></a>
+                  <div class="btns-group ul-li-center clearfix">
+                    <ul class="clearfix">
+                      <li>
+                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="las la-shopping-basket"></i></a>
+                      </li>
+                      <li>
+                        <a class="tooltipes" href="#!" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quickview-modal"><i class="las la-dot-circle"></i></a>
+                      </li>
+                      <li>
+                        <a href="#!" data-toggle="tooltip" data-placement="top" title="Add To Wishlist"><i class="lar la-heart"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h3 class="item-title"><a href="#!">Clinical Stethoscope Dual Head</a></h3>
+                  <span class="item-price">{% trans "EG" %} 39.50</span>
+                  <div class="rating-star ul-li-center clearfix">
+                    <ul class="clearfix">
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li>
+                        <i class="las la-star"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="product-grid text-center clearfix">
+                <div class="item-image">
+                  <a href="shop-details-1.html" class="image-wrap"><img src="{% static 'assets/images/img_6.jpg.svg' %}" alt="image_not_found" /></a>
+                  <div class="post-label ul-li-right clearfix">
+                    <ul class="clearfix">
+                      <li class="bg-skyblue">-30%</li>
+                    </ul>
+                  </div>
+                  <div class="btns-group ul-li-center clearfix">
+                    <ul class="clearfix">
+                      <li>
+                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="las la-shopping-basket"></i></a>
+                      </li>
+                      <li>
+                        <a class="tooltipes" href="#!" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quickview-modal"><i class="las la-dot-circle"></i></a>
+                      </li>
+                      <li>
+                        <a href="#!" data-toggle="tooltip" data-placement="top" title="Add To Wishlist"><i class="lar la-heart"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h3 class="item-title"><a href="#!">Digital Thermometer</a></h3>
+                  <span class="item-price">{% trans "EG" %} 39.50</span>
+                  <div class="rating-star ul-li-center clearfix">
+                    <ul class="clearfix">
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li>
+                        <i class="las la-star"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="product-grid text-center clearfix">
+                <div class="item-image">
+                  <a href="shop-details-1.html" class="image-wrap"><img src="{% static 'assets/images/img_4.jpg.svg' %}" alt="image_not_found" /></a>
+                  <div class="btns-group ul-li-center clearfix">
+                    <ul class="clearfix">
+                      <li>
+                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="las la-shopping-basket"></i></a>
+                      </li>
+                      <li>
+                        <a class="tooltipes" href="#!" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quickview-modal"><i class="las la-dot-circle"></i></a>
+                      </li>
+                      <li>
+                        <a href="#!" data-toggle="tooltip" data-placement="top" title="Add To Wishlist"><i class="lar la-heart"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h3 class="item-title"><a href="#!">Aloevera Food Supliment</a></h3>
+                  <span class="item-price">{% trans "EG" %} 39.50</span>
+                  <div class="rating-star ul-li-center clearfix">
+                    <ul class="clearfix">
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li>
+                        <i class="las la-star"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="product-grid text-center clearfix">
+                <div class="item-image">
+                  <a href="shop-details-1.html" class="image-wrap"><img src="{% static 'assets/images/API_4778-INT_CH-2201-TRANSPORT2-PRD-WHITE-FRONT_DETAIL_ON_CART-T0001_1 1.svg' %}" alt="image_not_found" /></a>
+                  <div class="post-label ul-li-right clearfix">
+                    <ul class="clearfix">
+                      <li class="bg-skyblue">-19%</li>
+                      <li class="bg-skyblue">NEW</li>
+                    </ul>
+                  </div>
+                  <div class="btns-group ul-li-center clearfix">
+                    <ul class="clearfix">
+                      <li>
+                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="las la-shopping-basket"></i></a>
+                      </li>
+                      <li>
+                        <a class="tooltipes" href="#!" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quickview-modal"><i class="las la-dot-circle"></i></a>
+                      </li>
+                      <li>
+                        <a href="#!" data-toggle="tooltip" data-placement="top" title="Add To Wishlist"><i class="lar la-heart"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h3 class="item-title"><a href="#!">First Medicine Aid Kit</a></h3>
+                  <span class="item-price">{% trans "EG" %} 29.50</span>
+                  <div class="rating-star ul-li-center clearfix">
+                    <ul class="clearfix">
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li>
+                        <i class="las la-star"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="product-grid text-center clearfix">
+                <div class="item-image">
+                  <a href="shop-details-1.html" class="image-wrap"><img src="{% static 'assets/images/img_4.jpg.svg' %}" alt="image_not_found" /></a>
+                  <div class="post-label ul-li-right clearfix">
+                    <ul class="clearfix">
+                      <li class="bg-skyblue">-20%</li>
+                    </ul>
+                  </div>
+                  <div class="btns-group ul-li-center clearfix">
+                    <ul class="clearfix">
+                      <li>
+                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="las la-shopping-basket"></i></a>
+                      </li>
+                      <li>
+                        <a class="tooltipes" href="#!" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quickview-modal"><i class="las la-dot-circle"></i></a>
+                      </li>
+                      <li>
+                        <a href="#!" data-toggle="tooltip" data-placement="top" title="Add To Wishlist"><i class="lar la-heart"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h3 class="item-title"><a href="#!">Digital Temparature meter</a></h3>
+                  <span class="item-price">{% trans "EG" %} 39.00</span>
+                  <div class="rating-star ul-li-center clearfix">
+                    <ul class="clearfix">
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li>
+                        <i class="las la-star"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="product-grid text-center clearfix">
+                <div class="item-image">
+                  <a href="shop-details-1.html" class="image-wrap"><img src="{% static 'assets/images/img_6.jpg.svg' %}" alt="image_not_found" /></a>
+                  <div class="btns-group ul-li-center clearfix">
+                    <ul class="clearfix">
+                      <li>
+                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="las la-shopping-basket"></i></a>
+                      </li>
+                      <li>
+                        <a class="tooltipes" href="#!" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quickview-modal"><i class="las la-dot-circle"></i></a>
+                      </li>
+                      <li>
+                        <a href="#!" data-toggle="tooltip" data-placement="top" title="Add To Wishlist"><i class="lar la-heart"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h3 class="item-title"><a href="#!">Surgical Face Mask</a></h3>
+                  <span class="item-price">{% trans "EG" %} 39.00</span>
+                  <div class="rating-star ul-li-center clearfix">
+                    <ul class="clearfix">
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li>
+                        <i class="las la-star"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="product-grid text-center clearfix">
+                <div class="item-image">
+                  <a href="shop-details-1.html" class="image-wrap"><img src="{% static 'assets/images/img_4.jpg.svg' %}" alt="image_not_found" /></a>
+                  <div class="post-label ul-li clearfix">
+                    <ul class="clearfix">
+                      <li class="bg-skyblue">SALE</li>
+                    </ul>
+                  </div>
+                  <div class="btns-group ul-li-center clearfix">
+                    <ul class="clearfix">
+                      <li>
+                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="las la-shopping-basket"></i></a>
+                      </li>
+                      <li>
+                        <a class="tooltipes" href="#!" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quickview-modal"><i class="las la-dot-circle"></i></a>
+                      </li>
+                      <li>
+                        <a href="#!" data-toggle="tooltip" data-placement="top" title="Add To Wishlist"><i class="lar la-heart"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h3 class="item-title"><a href="#!">Digital Temparature meter</a></h3>
+                  <span class="item-price">{% trans "EG" %} 39.50</span>
+                  <div class="rating-star ul-li-center clearfix">
+                    <ul class="clearfix">
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li class="active">
+                        <i class="las la-star"></i>
+                      </li>
+                      <li>
+                        <i class="las la-star"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> {% endcomment %}
+
+      <!-- product quick view - start -->
+      <div class="quickview-modal modal fade" id="quickview-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content clearfix">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="item-image">
+              <img src="{% static 'assets/images/product/img_12.jpg' %}" alt="image_not_found" />
+            </div>
+            <div class="item-content">
+              <h2 class="item-title mb-15">Digital Infrared Thermometer</h2>
+              <div class="rating-star ul-li mb-30 clearfix">
+                <ul class="float-left mr-2">
+                  <li class="active">
+                    <i class="las la-star"></i>
+                  </li>
+                  <li class="active">
+                    <i class="las la-star"></i>
+                  </li>
+                  <li class="active">
+                    <i class="las la-star"></i>
+                  </li>
+                  <li class="active">
+                    <i class="las la-star"></i>
+                  </li>
+                  <li>
+                    <i class="las la-star"></i>
+                  </li>
+                </ul>
+                <span class="review-text">(12 {% trans "Reviews" %})</span>
+              </div>
+              <span class="item-price mb-15">EG 49.50</span>
+              <p class="mb-30">{% trans "Best Electronic Digital Thermometer adipiscing elit, sed do eiusmod teincididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse us ultrices gravidaes. Risus commodo viverra maecenas accumsan lacus vel facilisis." %}</p>
+              <div class="quantity-form mb-30 clearfix">
+                <strong class="list-title">{% trans "Quantity" %}:</strong>
+                <div class="quantity-input">
+                  <form action="#">
+                    <span class="input-number-decrement">–</span>
+                    <input class="input-number-1" type="text" value="1" />
+                    <span class="input-number-increment">+</span>
+                  </form>
+                </div>
+              </div>
+              <div class="btns-group ul-li mb-30">
+                <ul class="clearfix">
+                  <li>
+                    <a href="#!" class="btn bg-royal-blue">{% trans "Add to Cart" %}</a>
+                  </li>
+                  <li>
+                    <a href="#!" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare Product"><i class="las la-sync"></i></a>
+                  </li>
+                  <li>
+                    <a href="#!" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wishlist"><i class="lar la-heart"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="info-list ul-li-block">
+                <ul class="clearfix">
+                  <li>
+                    <strong class="list-title">{% trans "Category" %}:</strong> <a href="#!">{% trans "Medical Equipment" %}</a>
+                  </li>
+                  <li class="social-icon ul-li">
+                    <strong class="list-title">{% trans "Share" %}:</strong>
+                    <ul class="clearfix">
+                      <li>
+                        <a href="#!"><i class="lab la-facebook"></i></a>
+                      </li>
+                      <li>
+                        <a href="#!"><i class="lab la-twitter"></i></a>
+                      </li>
+                      <li>
+                        <a href="#!"><i class="lab la-instagram"></i></a>
+                      </li>
+                      <li>
+                        <a href="#!"><i class="lab la-pinterest-p"></i></a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- product quick view - end -->
+      <!--  shop-section - end
+			==================================================  -->
+    </main>
+    <!--  main body - end
+		==================================================  -->
+
+      
+    {% include 'components/footer.html' %}
+
+
+      {% block script %}
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const addToCartBtn = document.getElementById("add-to-cart-btn");
+          const quantityInput = document.querySelector(".input-number-1");
+          const cartSuccessMessage = document.getElementById("cart-success-message");
+      
+          addToCartBtn.addEventListener("click", function (e) {
+              e.preventDefault(); // Prevent default form submission
+      
+              const quantity = quantityInput.value;
+              const addToCartUrl = document.getElementById("add-to-cart-form").getAttribute("action");
+      
+              fetch(`${addToCartUrl}?quantity=${quantity}`, {
+                  method: "GET",
+                  headers: {
+                      "X-Requested-With": "XMLHttpRequest",
+                  },
+              })
+              .then(response => {
+                  if (response) {
+                      // Show success message
+                      cartSuccessMessage.style.display = "block";
+      
+                      // Hide message after 2 seconds
+                      setTimeout(() => {
+                          cartSuccessMessage.style.display = "none";
+                      }, 2000);
+                  } else {
+                      alert("Error adding to cart. Please try again.");
+                  }
+              })
+              .catch(error => {
+                  console.error("Error:", error);
+              });
+          });
+
+          
+
+      });
+      
+      </script>
+
+      {% endblock %}
+    {% endblock %}

@@ -1,0 +1,94 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% load i18n %}
+{% block content %}
+{% include 'components/header.html' %}
+
+    <!--  main body - start
+		==================================================  -->
+    <main>
+      <!--  breadcrumb-section - start
+			==================================================  -->
+      <section id="slider-section" class="slider-section clearfix">
+        <div class="item d-flex align-items-center" data-background="{% static 'assets/images/hero-bg.png' %}" style="height: 70vh">
+          <div class="container">
+            <div class="text-center mt-5 mb-5">
+              <h1>{% trans "Wishlist" %}</h1>
+            </div>
+            <div class="breadcrumb-nav ul-li-center clearfix">
+              <ul class="clearfix">
+                <li style="font-size: 18px;color: #fff; ">
+                  <a href="index.html">{% trans "Home" %} |</a>
+                </li>
+                <li style="font-size: 18px;" class="active mx-2">
+                  <a href="shop.html">{% trans "Shop" %} |</a>
+                </li>
+                <li style="font-size: 18px; color: #fff; " class="active">{% trans "Wishlist" %}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  breadcrumb-section - end
+			==================================================  -->
+
+      <!--  wishlist-section - start
+			==================================================  -->
+      <section id="wishlist-section" class="wishlist-section sec-ptb-100 clearfix">
+        <div class="container">
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>{% trans "Product Name" %}</th>
+                  <th>{% trans "Total" %}</th>
+                  <th>{% trans "Stock Status" %}</th>
+                  <th></th>
+                </tr>
+              </thead>
+              {% for product in wishlist %}
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="product-info ul-li">
+                      <ul class="clearfix">
+                        <li>
+                          <a href="{% url 'product:remove_from_wishlist' product.product.slug %}" type="button" class="remove-btn" style="color: black;"><i class="las la-times"></i></a>
+                        </li>
+                        <li>
+                          <div class="product-image">
+                            <img src="{{product.product.main_image.url}}" alt="pill_image_not_found" />
+                          </div>
+                        </li>
+                        <li>
+                          <h4 class="item-title" style="color:black">{{product.product.title}}</h4>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="item-price">{% trans "EG" %} {{product.product.price}}</span>
+                  </td>
+                  <td>
+                    <span class="in-stock">{% trans "In Stock" %}</span>
+                  </td>
+                  <td>
+                    <a href="{% url 'product:add_to_card_2' product.product.slug %}" class="btn bg-royal-blue">{% trans "Add To Cart" %}</a>
+                  </td>
+                </tr>
+              </tbody>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+      </section>
+      <!--  wishlist-section - end
+			==================================================  -->
+    </main>
+    <!--  main body - end
+		==================================================  -->
+
+     
+    {% include 'components/footer.html' %}
+
+    {% endblock %}
